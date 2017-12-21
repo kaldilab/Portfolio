@@ -1,0 +1,116 @@
+<ion-header>
+	<ion-toolbar class="sage-toolbar sage-mainbar">
+		<ion-buttons start>
+			<button class="update" ion-button icon-only menuToggle>
+				<ion-icon name="md-menu"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>
+			<img src="assets/icon/home/sageLogo.svg">
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+	<div class="main-wrapper">
+		<div class="main-search">
+			<button ion-button outline round color color="gray2" (click)="goMapResult()">어디가 아프세요?</button>
+		</div>
+		<h2>건강 기록</h2>
+		<ion-row class="main-health" effect="slide" slidesPerView="3.4" speed="200" spaceBetween="10" freeMode="true">
+			<ion-col>
+				<button ion-button color="gray3" (click)="goTension()">
+					<img src="assets/icon/home/blood_pressure.svg">
+				</button>
+				<span>혈압</span>
+			</ion-col>
+			<ion-col>
+				<button ion-button color="gray3" (click)="goSugar()">
+					<img src="assets/icon/home/blood_sugar.svg">
+				</button>
+				<span>혈당</span>
+			</ion-col>
+			<ion-col>
+				<button ion-button color="gray3" (click)="goMedication()">
+					<img src="assets/icon/home/medication.svg">
+				</button>
+				<span>투약</span>
+			</ion-col>
+			<ion-col>
+				<button ion-button color="gray3" (click)="goPrescription()">
+					<img src="assets/icon/home/prescription.svg">
+				</button>
+				<span>처방전</span>
+			</ion-col>
+		</ion-row>
+		<ng-container *ngIf="recentHospitalList && recentHospitalList.length > 0">
+			<h2>최근 검색</h2>
+			<ion-slides #recentHospitalSlider class="main-hospital" effect="slide" slidesPerView="2.4" spaceBetween="10">
+				<ion-slide *ngFor="let hosp of recentHospitalList" (click)="goHosptalDetail(hosp)">
+					<figure>
+						<img [src]="hosp.thumbImageUrl" onError="this.src='assets/imgs/hospital_detail_bg.jpg';">
+					</figure>
+					<div>
+						<strong>{{hosp.name}}</strong>
+						<p>{{hosp.address}}</p>
+					</div>
+				</ion-slide>
+			</ion-slides>
+		</ng-container>
+		<ng-container *ngIf="nearHospitalList && nearHospitalList.length > 0" >
+			<h2>주변 검색</h2>
+			<ion-slides #hospitalSlider class="main-hospital" effect="slide" slidesPerView="2.4" spaceBetween="10">
+				<ion-slide *ngFor="let hosp of nearHospitalList" (click)="goHosptalDetail(hosp)">
+					<figure>
+						<img [src]="hosp.thumbImageUrl" onError="this.src='assets/imgs/hospital_detail_bg.jpg';">
+					</figure>
+					<div>
+						<strong>{{hosp.name}}</strong>
+						<p>{{hosp.address}}</p>
+					</div>
+				</ion-slide>
+					</ion-slide> -->
+			</ion-slides>
+		</ng-container>
+		<h2>매거진
+			<button class="view" (click)="goMagazineMain()">전체 보기</button>
+		</h2>
+		<ion-slides class="main-magazine" effect="slide" slidesPerView="2.1" speed="200" spaceBetween="10" *ngIf="recMagazineList && recMagazineList.length > 0">
+			<ion-slide *ngFor="let magazine of recMagazineList" (click)="goMagazineDetail(magazine)">
+				<figure>
+					<img [src]="magazine.thumbImageUrl">
+				</figure>
+				<div>
+					<span>{{magazine.title}}</span>
+					<p>{{magazine.subtitle}}</p>
+				</div>
+			</ion-slide>
+		</ion-slides>
+		<h2>인기 이벤트
+			<button class="view" (click)="goEventMain()">전체 보기</button>
+		</h2>
+		<div class="main-event">
+			<div class="event-list" *ngFor="let event of popEventList" (click)="goEventDetail(event.event)">
+				<div class="favorite-image">
+					<p class="photo">
+						<img [src]="event.event.thumbImageUrl" onError="this.src='assets/imgs/hospital_detail_bg.jpg';">
+					</p>
+				</div>
+				<div class="favorite-info">
+					<p class="name">{{event.event.hospital.name}}</p>
+					<p class="subtitle">{{event.event.title}}</p>
+					<p class="title">{{event.event.eventPrice}}원
+						<span>정상가
+							<s>{{event.event.originPrice}}원</s>
+						</span>
+					</p>
+					<p class="date">~ {{event.event.endDtSet}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-scrolltop">
+		<button ion-button clear (click)="scrollToTop()">
+			<img src="assets/icon/home/scrolltotop.svg" alt="TOP">
+		</button>
+	</div>
+</ion-content>
