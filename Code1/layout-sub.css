@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* ================================
+Sub - Layout
+================================ */
+
+/* --------------------------------
+섹션 - sub
+-------------------------------- */
+section.sub { box-sizing: border-box; width: 100%; position: relative; display: block; max-width: 1024px; margin-left: auto; margin-right: auto }
+section.sub:after, section.sub:before { content: " "; display: table }
+section.sub:after { clear: both }
+
+/* --------------------------------
+서브 헤더
+-------------------------------- */
+.sub-header { position: relative; word-break: keep-all; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto }
+.sub-header:after, .sub-header:before { content: " "; display: table }
+.sub-header:after { clear: both }
+
+/* 기본형 */
+.sub-header.header-basic { box-sizing: border-box; background: #fff; padding-top: 1.8em; padding-bottom: 1.8em; padding-left: 2em; padding-right: 2em; border-bottom: 1px solid #000 }
+.sub-header.header-basic h2 { color: #000; font-size: 2em; font-weight: 700; text-align: center }
+
+/* 컬러형 */
+.sub-header.header-color { padding-top: 2.5em; padding-bottom: 2.5em; padding-left: 3em; padding-right: 3em }
+.sub-header.header-color.bg_1 { background: pink }
+.sub-header.header-color.bg_2 { background: grey }
+.sub-header.header-color.bg_3 { background: #fff }
+.sub-header.header-color.bg_4 { background: #fff }
+.sub-header.header-color.bg_5 { background: #fff }
+
+/* 컬러형 - 블릿 */
+.sub-header.header-color.bullet_1::before { background: #fff; position: absolute; content: ''; width: 1.5em; height: 2.5em; top: 25%; bottom: auto; left: 0; right: auto; z-index: 200 }
+.sub-header.header-color.bullet_2::after { background: #fff; position: absolute; content: ''; width: 1.5em; height: 2.5em; top: 50%; bottom: auto; left: auto; right: 0; z-index: 200 }
+.sub-header.header-color h2 { color: #000; font-size: 2.4em; font-weight: 700 }
+.sub-header.header-color p.intro { color: #000; font-size: 1.2em; font-weight: 400; margin-top: .5em }
+.sub-header.header-color p.label { margin-bottom: 1em }
+.sub-header.header-color p.label span { box-sizing: border-box; color: #000; display: inline-block; font-size: 1.2em; font-weight: 700; padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; border: 2px solid #000; border-radius: 2em }
+.sub-header.header-color img { box-sizing: border-box; position: absolute; top: 3em; right: 2em; z-index: 200; width: auto; height: 30px }
+
+/* 사진형 */
+.sub-header.header-photo { padding-top: 3em; padding-bottom: 3em; padding-left: 3em; padding-right: 3em; background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover }
+.sub-header.header-photo.bg_1 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_01.jpg) }
+.sub-header.header-photo.bg_2 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_02.jpg) }
+.sub-header.header-photo.bg_3 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_03.jpg) }
+.sub-header.header-photo.bg_4 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_04.jpg) }
+.sub-header.header-photo.bg_5 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_05.jpg) }
+.sub-header.header-photo.bg_6 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_06.jpg) }
+.sub-header.header-photo.bg_7 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_07.jpg) }
+.sub-header.header-photo.bg_8 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_08.jpg) }
+.sub-header.header-photo.bg_9 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_09.jpg) }
+.sub-header.header-photo.bg_10 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_header_bg_10.jpg) }
+
+/* 사진형 - 글자색 반전 */
+.sub-header.header-photo.inverse_1 h2 { color: #000; font-size: 2.4em; font-weight: 700 }
+.sub-header.header-photo.inverse_1 p.intro { color: #000; font-size: 1.2em; font-weight: 400; margin-top: .5em }
+.sub-header.header-photo.inverse_1 p.label { margin-bottom: 1em }
+.sub-header.header-photo.inverse_1 p.label span { box-sizing: border-box; color: #000; display: inline-block; font-size: 1.2em; font-weight: 700; padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; border: 2px solid #000; border-radius: 2em }
+.sub-header.header-photo.inverse_2 h2 { color: #fff; font-size: 2.4em; font-weight: 700 }
+.sub-header.header-photo.inverse_2 p.intro { color: #fff; font-size: 1.2em; font-weight: 400; margin-top: .5em }
+.sub-header.header-photo.inverse_2 p.label { margin-bottom: 1em }
+.sub-header.header-photo.inverse_2 p.label span { box-sizing: border-box; color: #fff; display: inline-block; font-size: 1.2em; font-weight: 700; padding-top: 2px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; border: 2px solid #fff; border-radius: 2em }
+
+/* 맞춤형 */
+.sub-header.header-match { width: 100%; height: auto }
+.sub-header.header-match img { width: 100%; height: auto; display: block; overflow: hidden }
+.sub-contents { background: #fff; line-height: 1.8; padding-top: 0; padding-bottom: 2em; padding-left: 2em; padding-right: 2em; word-break: keep-all; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto }
+
+/* --------------------------------
+서브 컨텐츠
+-------------------------------- */
+.sub-contents:after, .sub-contents:before { content: " "; display: table }
+.sub-contents:after { clear: both }
+.sub-contents .point_1 { color: #000 }
+.sub-contents .point_2 { color: #000 }
+.sub-contents .point_3 { color: #000 }
+.sub-contents .point_4 { color: #000 }
+.sub-contents .point_5 { color: #000 }
+
+/* 인용문 */
+.sub-contents blockquote { position: relative; display: block; line-height: 1.5 }
+
+/* 인용문 - 블릿형 */
+.sub-contents blockquote.quote_1 { color: #60d0f5; font-size: 1.9em; font-weight: 400; padding-top: 2em; padding-bottom: 2em; padding-left: 0; padding-right: 0; padding-bottom: 1em; margin-bottom: 1em }
+.sub-contents blockquote.quote_1::after { box-sizing: border-box; background: #e6c84e; width: 50px; height: 2px; position: absolute; bottom: 0; left: 0; z-index: 100; content: " "; display: block }
+
+/* 인용문 - 컬러형 */
+.sub-contents blockquote.quote_2 { box-sizing: border-box; color: #444; background: #fff; font-size: 1.6em; font-weight: 400; padding-top: 2em; padding-bottom: 2em; padding-left: 0; padding-right: 0; text-align: left; border-bottom: 1px solid #e7e7e7 }
+.sub-contents blockquote.quote_2 span { color: #60d0f5; display: inline-block; font-size: 1.3em; font-weight: 700; margin-bottom: .5em }
+
+/* 인용문 - 리스트 */
+.sub-contents blockquote>ul { color: #666; font-size: .95em; font-weight: 400 }
+.sub-contents blockquote>ul>li { position: relative; padding-left: 1em; margin-bottom: .5em }
+.sub-contents blockquote>ul>li span { padding-right: 1em; color: #60d0f5 }
+.sub-contents blockquote>ul>li:before { content: ' '; position: absolute; width: 4px; height: 4px; top: 10px; left: 0; border-radius: 50%; background: #666 }
+
+/* --------------------------------
+서브 아티클
+-------------------------------- */
+.sub-contents article.TM-tile { background: #fff; padding-top: 2em; padding-bottom: 0; padding-left: 0; padding-right: 0; text-align: justify }
+.sub-contents article.TM-tile:after, .sub-contents article.TM-tile:before { content: " "; display: table }
+.sub-contents article.TM-tile:after { clear: both }
+
+/* 아티클 - 테두리 */
+.sub-contents article.TM-tile.article-bd_t { border-top: 1px solid #000 }
+.sub-contents article.TM-tile.article-bd_b { border-bottom: 1px solid #000 }
+
+/* 아티클 - 타일 개수 */
+.sub-contents article.TM-tile.tile-1>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 100% }
+.sub-contents article.TM-tile.tile-2>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 50% }
+.sub-contents article.TM-tile.tile-3>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 33.33333333% }
+.sub-contents article.TM-tile.tile-4>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 25% }
+.sub-contents article.TM-tile.tile-5>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 20% }
+.sub-contents article.TM-tile.tile-6>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 16.66666667% }
+.sub-contents article.TM-tile.tile-12>div { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 8.33333333% }
+
+/* 아티클 - 테두리 */
+.sub-contents article.TM-tile.tile-bd>div { box-sizing: border-box; border: 1px solid #000 }
+.sub-contents article.TM-tile.tile-bd_t>div { border-top: 1px solid #000 }
+.sub-contents article.TM-tile.tile-bd_b>div { border-bottom: 1px solid #000 }
+.sub-contents article.TM-tile.tile-bd_l>div { border-left: 1px solid #000 }
+.sub-contents article.TM-tile.tile-bd_r>div { border-right: 1px solid #000 }
+
+/* 아티클 - 패딩 */
+.sub-contents article.TM-tile.tile-pd_t>div { padding-top: 1em }
+.sub-contents article.TM-tile.tile-pd_b>div { padding-bottom: 1em }
+
+/* 아티클 - 마진 */
+.sub-contents article.TM-tile.tile-mg_t>div { margin-top: 1em }
+.sub-contents article.TM-tile.tile-mg_b>div { margin-bottom: 3em }
+
+/* 아티클 - 타일 */
+.sub-contents article.TM-tile>div { font-size: 1.5em; line-height: 1.5; margin-bottom: 3em }
+.sub-contents article.TM-tile>div.pic1_l { padding-right: 1em }
+.sub-contents article.TM-tile>div.pic1_r { padding-left: 1em }
+.sub-contents article.TM-tile>div.pic2_l { padding-right: .5em; margin-bottom: 1em }
+.sub-contents article.TM-tile>div.pic2_r { padding-left: .5em; margin-bottom: 1em }
+.sub-contents article.TM-tile>div p { color: #666; margin-top: 0; margin-bottom: 1em }
+.sub-contents article.TM-tile>div p.em { color: #60d0f5 }
+.sub-contents article.TM-tile>div p span { color: #ccc }
+.sub-contents article.TM-tile>div p strong { font-weight: 700 }
+.sub-contents article.TM-tile>div>a { display: block }
+.sub-contents article.TM-tile>div img { width: 100%; height: auto; display: block }
+
+/* 아티클 - 리스트 */
+.sub-contents article.TM-tile>div>ol, .sub-contents article.TM-tile>div>ul { color: #666; font-size: .95em; font-weight: 400 }
+.sub-contents article.TM-tile>div>ol>li, .sub-contents article.TM-tile>div>ul>li { position: relative; padding-left: 1em; margin-bottom: .5em }
+.sub-contents article.TM-tile>div>ol>li>span, .sub-contents article.TM-tile>div>ul>li>span { padding-right: 1em; color: #60d0f5 }
+.sub-contents article.TM-tile>div>ol>li:before, .sub-contents article.TM-tile>div>ul>li:before { content: ' '; position: absolute; width: 3px; height: 3px; top: 10px; left: 0; border-radius: 50%; background: #666 }
+.sub-contents article.TM-tile>div>ol.none>li, .sub-contents article.TM-tile>div>ul.none>li { padding-left: 0 }
+.sub-contents article.TM-tile>div>ol.none>li:before, .sub-contents article.TM-tile>div>ul.none>li:before { content: none }
+
+/* 아티클 - 리스트 넘버링 */
+.sub-contents article.TM-tile>div>ol.number>li, .sub-contents article.TM-tile>div>ul.number>li { background-repeat: no-repeat; background-position: left top; padding-left: 2em }
+.sub-contents article.TM-tile>div>ol.number>li:before, .sub-contents article.TM-tile>div>ul.number>li:before { content: none }
+.sub-contents article.TM-tile>div>ol.number>li.num_01, .sub-contents article.TM-tile>div>ul.number>li.num_01 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_01.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_02, .sub-contents article.TM-tile>div>ul.number>li.num_02 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_02.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_03, .sub-contents article.TM-tile>div>ul.number>li.num_03 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_03.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_04, .sub-contents article.TM-tile>div>ul.number>li.num_04 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_04.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_05, .sub-contents article.TM-tile>div>ul.number>li.num_05 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_05.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_06, .sub-contents article.TM-tile>div>ul.number>li.num_06 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_06.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_07, .sub-contents article.TM-tile>div>ul.number>li.num_07 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_07.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_08, .sub-contents article.TM-tile>div>ul.number>li.num_08 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_08.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_09, .sub-contents article.TM-tile>div>ul.number>li.num_09 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_09.png) }
+.sub-contents article.TM-tile>div>ol.number>li.num_10, .sub-contents article.TM-tile>div>ul.number>li.num_10 { background-image: url(http://resource.touchm.co.kr/Resource/image/sub_number_10.png) }
+.sub-contents article.TM-tile>div .indent { display: inline-block; margin-left: 1em; text-indent: -.7em }
+
+/* 아티클 - 소제목 */
+.sub-contents article.TM-tile h3 { clear: both; color: #000; font-size: 1.8em; font-weight: 700; margin-bottom: 1em; line-height: 1.5 }
+.sub-contents article.TM-tile h3 span { color: #000; display: inline-block; font-size: .8em; font-weight: 400; margin-left: 1em; padding-left: .5em; line-height: 1; border-left: 2px solid #60d0f5 }
+.sub-contents article.TM-tile h3 strong { color: #60d0f5; font-weight: 700 }
+.sub-contents article.TM-tile h4 { clear: both; color: #000; font-size: 1.55em; font-weight: 700; text-decoration: none; margin-bottom: .5em; line-height: 1.5 }
+.sub-contents article.TM-tile h4 span { color: #000 }
+.sub-contents article.TM-tile h4.blt { position: relative; padding-left: 1.5em }
+.sub-contents article.TM-tile h4.blt:before { content: ' '; position: absolute; width: 15px; height: 5px; top: 10px; left: 0; background: #333 }
+.sub-contents article.TM-tile h5 { clear: both; color: gray; font-size: 1.4em; font-weight: 500; text-decoration: none; margin-bottom: .5em; line-height: 1.5 }
+.sub-contents article.TM-tile h5 span { color: #000 }
+
+/* 아티클 - 모듈 영역 */
+.sub-contents.module-area { padding-top: 2em }

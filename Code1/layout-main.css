@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+/* ================================
+Main - Layout
+================================ */
+
+/* --------------------------------
+바디
+-------------------------------- */
+html { font-size: 10.5px }
+body { max-width: 1024px; margin-left: auto; margin-right: auto; position: relative; color: #000; background: #fff; font-family: 'Noto Sans Korean', sans-serif; font-size: 1em }
+body:after, body:before { content: " "; display: table }
+body:after { clear: both }
+body i.material-icons { font-size: 1em }
+body a { color: #000 }
+
+/* --------------------------------
+헤더
+-------------------------------- */
+header.header { box-sizing: border-box; width: 100%; position: relative; display: block; max-width: 1024px; margin-left: auto; margin-right: auto; background: #60d0f5 }
+header.header:after, header.header:before { content: " "; display: table }
+header.header:after { clear: both }
+header.header.header-float { box-sizing: border-box; background: rgba(255, 255, 255, 0); position: absolute; top: 0; left: 0; z-index: 200; width: 100% }
+header.header h1 { display: none }
+ul.TM-header:after, ul.TM-header:before { content: " "; display: table }
+ul.TM-header:after { clear: both }
+ul.TM-header li { float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 16.66666667%; box-sizing: border-box; height: 60px; line-height: 60px; text-align: center }
+ul.TM-header li a { display: block; cursor: pointer; width: 100%; height: 100%; white-space: nowrap; text-align: center; font-size: 0 }
+ul.TM-header li a:before { content: ''; height: 100%; display: inline-block; vertical-align: middle }
+ul.TM-header li a i { font-size: 30px; line-height: 60px }
+ul.TM-header li a img { width: auto; height: 30px; vertical-align: middle; white-space: normal }
+ul.TM-header li:first-child a { color: #000 }
+ul.TM-header li.title { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 66.66666667% }
+ul.TM-header li.title a { color: #000; font-weight: 700 }
+ul.TM-header li:last-child a { color: #000 }
+
+/* --------------------------------
+섹션 - main
+-------------------------------- */
+section.main { box-sizing: border-box; width: 100%; position: relative; display: block; max-width: 1024px; margin-left: auto; margin-right: auto }
+section.main:after, section.main:before { content: " "; display: table }
+section.main:after { clear: both }
+section.main li a { display: block }
+section.main li img { width: 100%; height: auto; display: block }
+
+/* --------------------------------
+메인
+-------------------------------- */
+ul.TM-tile { background: #fff }
+ul.TM-tile:after, ul.TM-tile:before { content: " "; display: table }
+ul.TM-tile:after { clear: both }
+
+/* 타일 - 패딩 */
+ul.TM-tile.tile-pd { padding: 1em }
+ul.TM-tile.tile-pd_t { padding-top: 0 }
+ul.TM-tile.tile-pd_b { padding-bottom: 0 }
+ul.TM-tile.tile-pd_l { padding-left: 0 }
+ul.TM-tile.tile-pd_r { padding-right: 0 }
+
+/* 타일 - 개수 */
+ul.TM-tile.tile-1 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 100% }
+ul.TM-tile.tile-2 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 50% }
+ul.TM-tile.tile-3 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 33.33333333% }
+ul.TM-tile.tile-4 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 25% }
+ul.TM-tile.tile-5 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 20% }
+ul.TM-tile.tile-6 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 16.66666667% }
+ul.TM-tile.tile-12 li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 8.33333333% }
+
+/* 타일 - 배경색 */
+ul.TM-tile.tile-bg_1 li { background: #fff }
+ul.TM-tile.tile-bg_2 li { background: pink }
+ul.TM-tile.tile-bg_3 li { background: #fff }
+ul.TM-tile.tile-bg_4 li { background: #fff }
+ul.TM-tile.tile-bg_5 li { background: #fff }
+
+/* 타일 - 테두리 */
+ul.TM-tile.tile-bd li { box-sizing: border-box; border: 1px solid #000 }
+ul.TM-tile.tile-bd_t li { box-sizing: border-box; border-top: 1px solid #000 }
+ul.TM-tile.tile-bd_b li { box-sizing: border-box; border-bottom: 1px solid #000 }
+ul.TM-tile.tile-bd_l li { box-sizing: border-box; border-left: 1px solid #000 }
+ul.TM-tile.tile-bd_r li { box-sizing: border-box; border-right: 1px solid #000 }
+
+/* 타일 - 마진 */
+ul.TM-tile.tile-mg li { padding: 1em }
+ul.TM-tile.tile-mg_t li { padding-top: 0 }
+ul.TM-tile.tile-mg_b li { padding-bottom: 0 }
+ul.TM-tile.tile-mg_l li { padding-left: 0 }
+ul.TM-tile.tile-mg_r li { padding-right: 0 }
+
+/* 타일 - 원 */
+ul.TM-tile.tile-circle li a { width: 60%; height: 60%; margin-top: 1em; margin-bottom: 1em; margin-left: auto; margin-right: auto }
+
+/* 타일 - 텍스트 */
+ul.TM-tile.tile-text li a { color: #000; font-size: 1.4em; padding-top: 1em; padding-bottom: 1em; text-align: center; vertical-align: middle }
+
+/* 타일 - 뉴스 */
+ul.TM-tile.tile-news li p { padding-left: 1.5em; padding-right: 1.5em; font-size: 1.3em; height: 60px; line-height: 60px; vertical-align: middle; overflow: hidden; text-overflow: ellipsis }
+ul.TM-tile.tile-news li p span { color: #000; background: gray; display: inline-block; font-size: .9em; padding-top: 5px; padding-bottom: 5px; padding-left: 1em; padding-right: 1em; margin-right: 1em; line-height: 1; vertical-align: middle; border-radius: 1em }
+ul.TM-tile.tile-news li p em { display: inline-block; width: 73%; line-height: 1.2; vertical-align: middle }
+
+/* 타일 - 파티션 */
+ul.TM-tile.tile-part li { box-sizing: border-box; border-left: 1px solid #000 }
+ul.TM-tile.tile-part li:first-child { box-sizing: border-box; border-left: 1px none #fff }
+
+/* 타일 - 플로트 */
+ul.TM-tile.tile-float { box-sizing: border-box; position: absolute; top: auto; bottom: 0; left: auto; right: 0; z-index: 200; width: 25% }
+ul.TM-tile.tile-float li { float: right; clear: right }
+
+/* 타일 - 자식들 */
+ul.TM-tile li.tile-child>a { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 50% }
+
+/* 타일 - 슬라이더 */
+ul.TM-slider { background: #fff }
+ul.TM-slider .slick-dots { box-sizing: border-box; width: 100%; position: absolute; bottom: 2em; left: 0; z-index: 999; text-align: center }
+ul.TM-slider .slick-dots li { display: inline-block; margin-left: .5em; margin-right: .5em }
+ul.TM-slider .slick-dots li button { width: 8px; height: 8px; background: #fff; padding: 0; display: block; text-indent: -9999px; overflow: hidden; border-radius: 50% }
+ul.TM-slider .slick-dots li.slick-active button { background: #000 }
+
+/* 포장지 */
+div.TM-outer:after, div.TM-outer:before { content: " "; display: table }
+div.TM-outer:after { clear: both }
+
+/* --------------------------------
+모듈 - 메인 리스트
+-------------------------------- */
+div.TM-module { padding-left: .5em; padding-right: .5em; padding-top: 1.5em; padding-bottom: 1.5em; vertical-align: middle }
+div.TM-module ul.module-tab:after, div.TM-module ul.module-tab:before { content: " "; display: table }
+div.TM-module ul.module-tab:after { clear: both }
+div.TM-module ul.module-tab li { box-sizing: border-box; float: left; width: 49%; margin-left: 1%; cursor: pointer; text-align: center; font-size: 1.4em; padding-top: 10px; padding-bottom: 10px; color: #fff; background: #ccc; border-top: 3px solid #ccc }
+div.TM-module ul.module-tab li:first-child { width: 50%; margin-left: 0 }
+div.TM-module ul.module-tab li.on { color: #000; background: #eee; border-top: 3px solid #60d0f5 }
+div.TM-module ul.module-content { padding-top: 1em; padding-bottom: 1em; display: none }
+div.TM-module ul.module-content li { box-sizing: border-box; border-bottom: 1px solid #eee }
+div.TM-module ul.module-content li a { display: block; font-size: 1.3em; color: #333; height: 3.5em; line-height: 3.5em; padding-left: 1em; padding-right: 1em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+div.TM-module ul.module-content.on { display: block }
+
+/* --------------------------------
+푸터
+-------------------------------- */
+footer.footer { box-sizing: border-box; width: 100%; position: relative; display: block; max-width: 1024px; margin-left: auto; margin-right: auto; background: gray }
+footer.footer:after, footer.footer:before { content: " "; display: table }
+footer.footer:after { clear: both }
+ul.TM-footer:after, ul.TM-footer:before { content: " "; display: table }
+ul.TM-footer:after { clear: both }
+ul.TM-footer li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; padding-left: 2em; padding-right: 2em; width: 50%; padding-top: 1.5em; padding-bottom: 1.5em }
+ul.TM-footer li a { display: inline-block; font-size: 1.4em }
+ul.TM-footer li.home a { color: #fff }
+ul.TM-footer li.pc { text-align: right }
+ul.TM-footer li.pc a { color: #fff }
+ul.TM-footer li.address { float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 100%; box-sizing: border-box; border-top: 1px solid #fff }
+ul.TM-footer li.address address { color: #fff; font-size: 1.2em; line-height: 1.5 }
+
+/* 탑 버튼 */
+a.top-btn { width: 2em; height: 2em; box-sizing: border-box; background: rgba(0, 0, 0, .2); color: #fff; display: block; font-size: 2em; margin-top: 5px; margin-bottom: 5px; margin-left: auto; margin-right: auto; padding-top: 10px; text-align: center; cursor: pointer; position: fixed; bottom: 5px; right: 10px; z-index: 200; border-radius: 5px }
+
+/* --------------------------------
+사이드 네비
+-------------------------------- */
+/* 네비 */
+nav.sidenavi { background: rgba(255, 255, 255, .95); width: 250px; height: 100%; min-height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch !important; -webkit-transition-duration: .5s; -moz-transition-duration: .5s; -o-transition-duration: .5s; transition-duration: .5s; -webkit-transition-property: transform; -moz-transition-property: transform; -o-transition-property: transform; transition-property: transform; -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1); -moz-transition-timing-function: cubic-bezier(.19, 1, .22, 1); -o-transition-timing-function: cubic-bezier(.19, 1, .22, 1); transition-timing-function: cubic-bezier(.19, 1, .22, 1) }
+nav.sidenavi.sidenavi-left { box-sizing: border-box; position: fixed; top: 0; left: -250px; z-index: 999 }
+nav.sidenavi.sidenavi-left.sidenavi-open { -webkit-transform: translateX(250px); -moz-transform: translateX(250px); -ms-transform: translateX(250px); -o-transform: translateX(250px); transform: translateX(250px); -webkit-backface-visibility: hidden !important }
+nav.sidenavi.sidenavi-right { box-sizing: border-box; position: fixed; top: 0; right: -250px; z-index: 999 }
+nav.sidenavi.sidenavi-right.sidenavi-open { -webkit-transform: translateX(-250px); -moz-transform: translateX(-250px); -ms-transform: translateX(-250px); -o-transform: translateX(-250px); transform: translateX(-250px); -webkit-backface-visibility: hidden !important }
+
+/* 네비 - 로그인/회원가입 */
+ul.TM-member { background: #60d0f5 }
+ul.TM-member:after, ul.TM-member:before { content: " "; display: table }
+ul.TM-member:after { clear: both }
+ul.TM-member li { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; padding-left: .5em; padding-right: .5em; width: 33.33333333% }
+ul.TM-member li a { box-sizing: border-box; color: #fff; display: block; font-size: 1.6em; font-weight: 700; height: 60px; line-height: 60px; text-align: center }
+ul.TM-member li a.sidenavi-close { cursor: pointer; font-size: 3em }
+ul.TM-member li a.sidenavi-close i { line-height: 60px }
+ul.TM-member li:last-child { float: right; text-align: right }
+
+/* 네비 - 메뉴 */
+ul.TM-menu li.current>a { color: #60d0f5 !important; font-weight: 700 !important }
+ul.TM-menu>li { box-sizing: border-box; border-bottom: 1px solid #ccc }
+ul.TM-menu>li a { box-sizing: border-box; color: #000; position: relative; display: block; font-size: 1.5em; height: 60px; line-height: 60px; padding-left: 1em; padding-right: 1em }
+ul.TM-menu>li a.submenu-icon { position: relative; cursor: pointer }
+ul.TM-menu>li a.submenu-icon i { color: #60d0f5; position: absolute; top: 16px; right: 10px; font-size: 1.8em }
+ul.TM-menu>li ul.TM-submenu { background: rgba(238, 238, 238, .9); display: none }
+ul.TM-menu>li ul.TM-submenu>li { box-sizing: border-box; border-top: 1px solid #ddd }
+ul.TM-menu>li ul.TM-submenu>li>a { color: #333; padding-left: 2em; padding-right: 2em }
+ul.TM-menu>li ul.TM-submenu>li ul { background: #ddd }
+ul.TM-menu>li ul.TM-submenu>li ul li { box-sizing: border-box; border-top: 1px solid #eee }
+ul.TM-menu>li ul.TM-submenu>li ul li a { box-sizing: border-box; color: #666; font-size: 1.3em; height: 45px; line-height: 45px; padding-left: 4em }
+
+/* --------------------------------
+네비와 컨테이너 포장지
+-------------------------------- */
+.wrapper { position: relative }
+.wrapper:after, .wrapper:before { content: " "; display: table }
+.wrapper:after { clear: both }
+.wrapper.sidenavi-dark:after { width: 100%; height: 100%; box-sizing: border-box; background: rgba(0, 0, 0, .7); position: fixed; top: 0; left: 0; z-index: 200 }
+.slider-wrap { position: relative }
+.slider-wrap:after, .slider-wrap:before { content: " "; display: table }
+.slider-wrap:after { clear: both }
+
+/* --------------------------------
+Tablet View - 1024px
+-------------------------------- */
+@media only screen and (min-width:1024px) {
+	.wrapper { max-width: 774px; margin-left: auto; margin-right: auto }
+	.wrapper.sidenavi-left { margin-left: auto; margin-right: 0 }
+	.wrapper.sidenavi-right { margin-left: 0; margin-right: auto }
+	nav.sidenavi.sidenavi-left { position: absolute; top: 0; left: 0 }
+	nav.sidenavi.sidenavi-right { position: absolute; top: 0; right: 0 }
+	ul.TM-header li:first-child { display: none }
+	ul.TM-header li.title { box-sizing: border-box; float: left; position: relative; display: block; margin-left: 0; margin-right: 0; width: 100% }
+	ul.TM-header li:last-child { display: none }
+	ul.TM-member li:last-child { display: none }
+}

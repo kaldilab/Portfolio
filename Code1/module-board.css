@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/* ================================
+Module - F3
+================================ */
+
+/* 모듈*/
+.module-area:after, .module-area:before { content: " "; display: table }
+.module-area:after { clear: both }
+.module-area button, .module-area form, .module-area input, .module-area option, .module-area select { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0 }
+.module-area select::-ms-expand { display: none }
+.module-title { padding: .7em 0; background: #47c3b6; font-size: 2em; color: #fff; text-align: center }
+
+/* --------------------------------
+[LIST] - 상담, 자유게시판
+-------------------------------- */
+.F3-list { padding: 1.5em }
+.F3-list:after, .F3-list:before { content: " "; display: table }
+.F3-list:after { clear: both }
+.F3-list .search-form { margin-top: 2em }
+.F3-list .search-form:after, .F3-list .search-form:before { content: " "; display: table }
+.F3-list .search-form:after { clear: both }
+.F3-list .search-form form.input-group { display: block; position: relative; width: 100%; font-size: 1.2em }
+.F3-list .search-form form.input-group:after, .F3-list .search-form form.input-group:before { content: " "; display: table }
+.F3-list .search-form form.input-group:after { clear: both }
+.F3-list .search-form form.input-group select.select { box-sizing: border-box; background-color: #fff; color: #666; padding: 0; cursor: pointer; float: left; height: 45px; overflow: hidden; text-align: center; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ccc; text-decoration: none; position: relative; width: 25%; border-right: none; padding-left: 10px; background-image: url(/Resource/image/arrow_down.png); background-position: right center; background-repeat: no-repeat }
+.F3-list .search-form form.input-group select.select option { font-size: .9em }
+.F3-list .search-form form.input-group input.form-control { box-sizing: border-box; background-color: #fff; color: #666; padding: 0; cursor: pointer; float: left; height: 45px; overflow: hidden; text-align: center; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ccc; text-decoration: none; width: 40%; text-align: left; cursor: auto; border-left: none; color: #333 }
+.F3-list .search-form form.input-group button.btn-search { box-sizing: border-box; background-color: #fff; color: #666; padding: 0; cursor: pointer; float: left; height: 45px; overflow: hidden; text-align: center; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ccc; text-decoration: none; width: 15%; font-size: 1.6em; border-left: none }
+.F3-list .search-form form.input-group button.btn-write { box-sizing: border-box; background-color: #fff; color: #666; padding: 0; cursor: pointer; float: left; height: 45px; overflow: hidden; text-align: center; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ccc; text-decoration: none; width: 19%; margin-left: 1%; background-color: #47c3b6; border-color: #47c3b6; color: #fff }
+.F3-list .board-list { margin-top: 2em }
+.F3-list .board-list:after, .F3-list .board-list:before { content: " "; display: table }
+.F3-list .board-list:after { clear: both }
+.F3-list .board-list ol { list-style: none }
+.F3-list .board-list ol>li { padding: 10px 0; border-bottom: 1px solid #ededed }
+.F3-list .board-list ol>li>p { margin: 6px 0; color: #999; font-size: 1.2em }
+.F3-list .board-list ol>li>p span.answer-chk { display: inline-block; width: 64px; height: 20px; margin-right: 5px; vertical-align: middle; background-image: url(/Resource/image/answer_chk.png); background-repeat: no-repeat; background-size: cover; line-height: 1 }
+.F3-list .board-list ol>li>p span.answer-chk.on { background-image: url(/Resource/image/answer_end.png) }
+.F3-list .board-list ol>li>p span.icon-new { display: inline-block; font-size: 8px; color: #fff; background: #47c3b6; border-radius: 2px; padding: 1px 2px; vertical-align: middle; margin-left: .5em; line-height: 1 }
+.F3-list .board-list ol>li>a { font-size: 1.6em; color: #333; display: inline-block; margin-top: 5px; vertical-align: middle; line-height: 1.2 }
+.F3-list .board-list ol>li>i { display: inline-block; width: 12px; height: 13px; margin-left: 5px; vertical-align: middle; background-image: url(/Resource/image/secret.png); background-repeat: no-repeat; background-size: cover; text-indent: -9999px }
+.F3-list .pagination { margin: 2em 0; text-align: center }
+.F3-list .pagination>ol { list-style: none }
+.F3-list .pagination>ol>li { display: inline-block }
+.F3-list .pagination>ol>li>a { display: block; padding: 10px 13px; font-size: 1.4em }
+.F3-list .pagination>ol>li .on { background-color: #47c3b6; color: #fff }
+
+/* --------------------------------
+[VIEW] - 상담, 자유게시판
+-------------------------------- */
+.F3-view { padding: 1.5em }
+.F3-view:after, .F3-view:before { content: " "; display: table }
+.F3-view:after { clear: both }
+.F3-view .board-view { margin-top: 2em }
+.F3-view .board-view h1.board-view-title { font-size: 1.7em; text-align: justify; color: #000 }
+.F3-view .board-view span.board-view-info { display: block; color: #aaa; font-size: 1.4em; font-weight: 300; margin-top: 10px }
+.F3-view .board-view .board-view-content { border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-top: 1.5em; padding: 2em 0; line-height: 1.5; font-size: 1.3em; color: #444; text-align: justify }
+.F3-view .board-view .board-view-content span { font-family: 'Noto Sans Korean', sans-serif !important }
+.F3-view .board-view .board-view-content img { max-width: 100% }
+.F3-view .board-view .answer-view { padding: 3em 0; border-bottom: 1px solid #ccc }
+.F3-view .board-view .answer-view span.answer-view-tit { display: block }
+.F3-view .board-view .answer-view span.answer-view-tit span.pentagon { display: block; width: 44px; height: 20px; vertical-align: middle; background-image: url(/Resource/image/answer.png); background-repeat: no-repeat; background-size: cover; overflow: hidden; text-indent: -9999px; margin-bottom: 1em }
+.F3-view .board-view .answer-view span.answer-view-tit>p { line-height: 1.5; font-size: 1.3em; color: #666; text-align: justify }
+.F3-view .board-view .btn-area { margin: 4em 0 }
+.F3-view .board-view .btn-area a.btn-default { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; display: block; width: 120px; margin: 0 auto }
+.F3-view .board-view .btnset { margin: 2em 0 }
+.F3-view .board-view .btnset:after, .F3-view .board-view .btnset:before { content: " "; display: table }
+.F3-view .board-view .btnset:after { clear: both }
+.F3-view .board-view .btnset button[type=button] { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; float: right; display: block; width: 75px; font-size: 1.2em }
+.F3-view .board-view .btnset button[type=button]:first-child { float: left }
+.F3-view .board-view .btnset button[type=button].btn-success { margin-right: 5px; background-color: #47c3b6; border-color: #47c3b6; color: #fff }
+
+/* --------------------------------
+[MODIFY], [WRITE] - 상담
+-------------------------------- */
+.F3-modify, .F3-write { padding: 1.5em }
+.F3-modify:after, .F3-modify:before, .F3-write:after, .F3-write:before { content: " "; display: table }
+.F3-modify:after, .F3-write:after { clear: both }
+.F3-modify p.req-fld, .F3-write p.req-fld { margin-top: 2em; padding-bottom: 5px; font-size: 1.3em; color: #333; line-height: 1 }
+.F3-modify p.req-fld span.p-blt, .F3-write p.req-fld span.p-blt { font-size: 1.4em; color: #47c3b6; vertical-align: middle; font-weight: 700; margin-right: 5px }
+.F3-modify .details.details_cs:after, .F3-modify .details.details_cs:before, .F3-write .details.details_cs:after, .F3-write .details.details_cs:before { content: " "; display: table }
+.F3-modify .details.details_cs:after, .F3-write .details.details_cs:after { clear: both }
+.F3-modify .details.details_cs span.p-blt, .F3-write .details.details_cs span.p-blt { font-size: 1.4em; color: #47c3b6; vertical-align: middle; font-weight: 700; margin-right: 5px }
+.F3-modify form.memberform, .F3-write form.memberform { border-top: 2px solid #111 }
+.F3-modify form.memberform:after, .F3-modify form.memberform:before, .F3-write form.memberform:after, .F3-write form.memberform:before { content: " "; display: table }
+.F3-modify form.memberform:after, .F3-write form.memberform:after { clear: both }
+.F3-modify form.memberform fieldset:after, .F3-modify form.memberform fieldset:before, .F3-write form.memberform fieldset:after, .F3-write form.memberform fieldset:before { content: " "; display: table }
+.F3-modify form.memberform fieldset:after, .F3-write form.memberform fieldset:after { clear: both }
+.F3-modify form.memberform fieldset>legend, .F3-write form.memberform fieldset>legend { text-indent: -999px; line-height: 0; font-size: 0 }
+.F3-modify form.memberform fieldset .info-dec, .F3-write form.memberform fieldset .info-dec { padding: 1em 0; border-bottom: 1px solid #eee }
+.F3-modify form.memberform fieldset .info-dec:after, .F3-modify form.memberform fieldset .info-dec:before, .F3-write form.memberform fieldset .info-dec:after, .F3-write form.memberform fieldset .info-dec:before { content: " "; display: table }
+.F3-modify form.memberform fieldset .info-dec:after, .F3-write form.memberform fieldset .info-dec:after { clear: both }
+.F3-modify form.memberform fieldset .info-dec:hover, .F3-write form.memberform fieldset .info-dec:hover { background: #f9f9f9 }
+.F3-modify form.memberform fieldset .info-dec>label, .F3-write form.memberform fieldset .info-dec>label { display: inline-block; width: 27%; font-size: 1.3em; font-weight: 700; color: #333 }
+.F3-modify form.memberform fieldset .info-dec>input, .F3-modify form.memberform fieldset .info-dec>select, .F3-write form.memberform fieldset .info-dec>input, .F3-write form.memberform fieldset .info-dec>select { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; display: inline-block; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none }
+.F3-modify form.memberform fieldset .info-dec>input:focus, .F3-modify form.memberform fieldset .info-dec>select:focus, .F3-write form.memberform fieldset .info-dec>input:focus, .F3-write form.memberform fieldset .info-dec>select:focus { box-shadow: 0 0 5px #ccc }
+.F3-modify form.memberform fieldset .info-dec>input[name=IsOpen], .F3-write form.memberform fieldset .info-dec>input[name=IsOpen], .F3-modify form.memberform fieldset .info-dec>input[name=IsNotice], .F3-write form.memberform fieldset .info-dec>input[name=IsNotice] { position: absolute; left: -100%; }
+.F3-modify form.memberform fieldset .info-dec>input[name=IsOpen] + label, .F3-write form.memberform fieldset .info-dec>input[name=IsOpen] + label, .F3-modify form.memberform fieldset .info-dec>input[name=IsNotice] + label, .F3-write form.memberform fieldset .info-dec>input[name=IsNotice] + label { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none; font-weight: 400; position: relative; display: inline-block; width: 24.5%; line-height: 40px; padding: 0; text-align: center; cursor: pointer; }
+.F3-modify form.memberform fieldset .info-dec>input[name=IsOpen]:checked + label, .F3-write form.memberform fieldset .info-dec>input[name=IsOpen]:checked + label, .F3-modify form.memberform fieldset .info-dec>input[name=IsNotice]:checked + label, .F3-write form.memberform fieldset .info-dec>input[name=IsNotice]:checked + label { border: 1px solid #47c3b6; background-color: #47c3b6; color: #fff }
+.F3-modify form.memberform fieldset .info-dec>select, .F3-write form.memberform fieldset .info-dec>select { cursor: pointer; background-image: url(/Resource/image/arrow_down.png); background-position: right center; background-repeat: no-repeat }
+.F3-modify form.memberform fieldset .info-dec>select#DoctorID, .F3-write form.memberform fieldset .info-dec>select#DoctorID { width: 50% }
+.F3-modify form.memberform fieldset .info-dec>select#EmailDomainSelect, .F3-write form.memberform fieldset .info-dec>select#EmailDomainSelect { display: inline-block; float: left; margin-left: 27.5%; margin-top: .5em }
+.F3-modify form.memberform fieldset .info-dec>input#RegisteredName, .F3-write form.memberform fieldset .info-dec>input#RegisteredName { width: 50% }
+.F3-modify form.memberform fieldset .info-dec>input#EmailID, .F3-write form.memberform fieldset .info-dec>input#EmailID { width: 28%; padding: 0 5px }
+.F3-modify form.memberform fieldset .info-dec>input#EmailHost, .F3-write form.memberform fieldset .info-dec>input#EmailHost { width: 37%; padding: 0 5px }
+.F3-modify form.memberform fieldset .info-dec>input#Tel, .F3-write form.memberform fieldset .info-dec>input#Tel { width: 50% }
+.F3-modify form.memberform fieldset .info-dec>input#txtPassword, .F3-write form.memberform fieldset .info-dec>input#txtPassword { width: 50% }
+.F3-modify form.memberform fieldset .info-dec>input#Title, .F3-write form.memberform fieldset .info-dec>input#Title { width: 72% }
+.F3-modify form.memberform fieldset .info-dec>span, .F3-write form.memberform fieldset .info-dec>span { font-size: 1.1em }
+.F3-modify form.memberform fieldset .info-dec>div#divContent, .F3-write form.memberform fieldset .info-dec>div#divContent { box-sizing: border-box; display: inline-block; float: right; margin-left: .5%; width: 72%; height: 201px; background-color: #fff; color: #666; border: 1px solid #ddd; text-align: justify; line-height: 1.5; overflow: auto; padding: 1em; font-size: 1.2em; text-decoration: none }
+.F3-modify form.memberform fieldset .info-dec>div#divContent:focus, .F3-write form.memberform fieldset .info-dec>div#divContent:focus { box-shadow: 0 0 5px #ccc }
+.F3-modify .btnset, .F3-write .btnset { margin: 2em 0 }
+.F3-modify .btnset:after, .F3-modify .btnset:before, .F3-write .btnset:after, .F3-write .btnset:before { content: " "; display: table }
+.F3-modify .btnset:after, .F3-write .btnset:after { clear: both }
+.F3-modify .btnset button[type=button], .F3-write .btnset button[type=button] { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; float: right; display: block; width: 75px; font-size: 1.2em }
+.F3-modify .btnset button[type=button]:first-child, .F3-write .btnset button[type=button]:first-child { float: left }
+.F3-modify .btnset button[type=button].btn-success, .F3-write .btnset button[type=button].btn-success { margin-right: 5px; background-color: #47c3b6; border-color: #47c3b6; color: #fff }
+
+/* --------------------------------
+[CERT] - 비번인증
+-------------------------------- */
+.F3-cert { padding: 1.5em }
+.F3-cert:after, .F3-cert:before { content: " "; display: table }
+.F3-cert:after { clear: both }
+.F3-cert .login-tit { margin-top: 20px; padding-bottom: 15px; text-align: center; border-bottom: 2px solid #111; font-size: 1.7em; color: #333 }
+.F3-cert form.loginform { margin-top: 20px }
+.F3-cert form.loginform .login-input>label { display: none }
+.F3-cert form.loginform .login-input>input { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; display: inline-block; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none; display: block; margin: 0 auto; width: 90%; height: 50px; line-height: 50px; font-size: 1.5em }
+.F3-cert form.loginform .login-input>input:focus { box-shadow: 0 0 5px #ccc }
+.F3-cert form.loginform .login-input>input#password { margin-top: -1px }
+.F3-cert form.loginform .login-btn { padding: 20px 0 }
+.F3-cert form.loginform .login-btn>button { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; display: block; margin: 0 auto; width: 90%; height: 50px; line-height: 50px; font-size: 1.7em }
+
+/* --------------------------------
+[LOGIN] - 로그인
+-------------------------------- */
+.F3-login { padding: 1.5em }
+.F3-login:after, .F3-login:before { content: " "; display: table }
+.F3-login:after { clear: both }
+.F3-login .login-tit { margin-top: 20px; padding-bottom: 15px; text-align: center; border-bottom: 2px solid #111; font-size: 1.7em; color: #333 }
+.F3-login form.loginform { margin-top: 20px }
+.F3-login form.loginform .login-input>label { display: none }
+.F3-login form.loginform .login-input>input { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; display: inline-block; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none; display: block; margin: 0 auto; width: 90%; height: 50px; line-height: 50px; font-size: 1.5em }
+.F3-login form.loginform .login-input>input:focus { box-shadow: 0 0 5px #ccc }
+.F3-login form.loginform .login-input>input#password { margin-top: -1px }
+.F3-login form.loginform .login-btn { padding: 20px 0 }
+.F3-login form.loginform .login-btn>button { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; display: block; margin: 0 auto; width: 90%; height: 50px; line-height: 50px; font-size: 1.7em }
+.F3-login .login-btnset { margin-bottom: 20px; padding-bottom: 15px; text-align: center }
+.F3-login .login-btnset:after, .F3-login .login-btnset:before { content: " "; display: table }
+.F3-login .login-btnset:after { clear: both }
+.F3-login .login-btnset>a { box-sizing: border-box; display: block; float: right; width: 33%; border-right: 1px solid #ccc; font-size: 1.35em; color: #666 }
+.F3-login .login-btnset>a:last-of-type { color: #47c3b6; border-right: 0 none }
+
+/* --------------------------------
+[MEMBER] - 회원가입
+-------------------------------- */
+.F3-member { padding: 1.5em }
+.F3-member:after, .F3-member:before { content: " "; display: table }
+.F3-member:after { clear: both }
+.F3-member form.memberform { border-top: 2px solid #111 }
+.F3-member form.memberform:after, .F3-member form.memberform:before { content: " "; display: table }
+.F3-member form.memberform:after { clear: both }
+.F3-member form.memberform fieldset:after, .F3-member form.memberform fieldset:before { content: " "; display: table }
+.F3-member form.memberform fieldset:after { clear: both }
+.F3-member form.memberform fieldset>legend { text-indent: -999px; line-height: 0; font-size: 0 }
+.F3-member form.memberform fieldset .info-dec { padding: 1em 0; border-bottom: 1px solid #eee }
+.F3-member form.memberform fieldset .info-dec:after, .F3-member form.memberform fieldset .info-dec:before { content: " "; display: table }
+.F3-member form.memberform fieldset .info-dec:after { clear: both }
+.F3-member form.memberform fieldset .info-dec:hover { background: #f9f9f9 }
+.F3-member form.memberform fieldset .info-dec>label { display: inline-block; width: 27%; font-size: 1.3em; font-weight: 700; color: #333 }
+.F3-member form.memberform fieldset .info-dec>input, .F3-member form.memberform fieldset .info-dec>select { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; display: inline-block; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none }
+.F3-member form.memberform fieldset .info-dec>input:focus, .F3-member form.memberform fieldset .info-dec>select:focus { box-shadow: 0 0 5px #ccc }
+.F3-member form.memberform fieldset .info-dec>input[name=MemberSex] { position: absolute; left: -100%; }
+.F3-member form.memberform fieldset .info-dec>input[name=MemberSex] + label { box-sizing: border-box; background-color: #fff; color: #666; padding: 0 1em; height: 40px; font-size: 1.3em; overflow: hidden; text-align: justify; line-height: 1; vertical-align: middle; white-space: nowrap; border: 1px solid #ddd; text-decoration: none; font-weight: 400; position: relative; display: inline-block; width: 24.5%; line-height: 40px; padding: 0; text-align: center; cursor: pointer; }
+.F3-member form.memberform fieldset .info-dec>input[name=MemberSex]:checked + label { border: 1px solid #47c3b6; background-color: #47c3b6; color: #fff }
+.F3-member form.memberform fieldset .info-dec>select { cursor: pointer; background-image: url(/Resource/image/arrow_down.png); background-position: right center; background-repeat: no-repeat }
+.F3-member form.memberform fieldset .info-dec>select#BirthYear { width: 23%; padding: 0 4px }
+.F3-member form.memberform fieldset .info-dec>select#BirthMonth { width: 16%; padding: 0 4px }
+.F3-member form.memberform fieldset .info-dec>select#BirthDay { width: 16%; padding: 0 4px }
+.F3-member form.memberform fieldset .info-dec>select#EmailDomainSelect { display: inline-block; float: left; margin-left: 27.5%; margin-top: .5em }
+.F3-member form.memberform fieldset .info-dec>select#EmailDomainSelect~p.help-txt { margin-top: 60px }
+.F3-member form.memberform fieldset .info-dec>input#MemberID { width: 50% }
+.F3-member form.memberform fieldset .info-dec>input#MemberPwd { width: 50% }
+.F3-member form.memberform fieldset .info-dec>input#MemberPwdConfirm { width: 50% }
+.F3-member form.memberform fieldset .info-dec>input#MemberName { width: 50% }
+.F3-member form.memberform fieldset .info-dec>input#EmailID { width: 31%; padding: 0 4px }
+.F3-member form.memberform fieldset .info-dec>input#EmailDomain { width: 35%; padding: 0 4px }
+.F3-member form.memberform fieldset .info-dec>span { font-size: .9em }
+.F3-member form.memberform fieldset .info-dec p.help-txt { width: 72%; margin-left: auto; margin-right: 0; font-size: 1.1em; margin-top: 10px; text-align: justify }
+.F3-member .btnset { margin: 2em 0; padding: 0 30px }
+.F3-member .btnset:after, .F3-member .btnset:before { content: " "; display: table }
+.F3-member .btnset:after { clear: both }
+.F3-member .btnset button[type=button] { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; float: right; display: block; width: 75px; font-size: 1.2em }
+.F3-member .btnset button[type=button]:first-child { float: left }
+.F3-member .btnset button[type=button].btn-success { margin-right: 5px; background-color: #47c3b6; border-color: #47c3b6; color: #fff }
+.F3-member .btnset button[type=button] { width: 48% }
+
+/* --------------------------------
+F3 - 개별 설정
+-------------------------------- */
+.mboard-view .btn-area { margin: 4em 0; margin: 2em 0 }
+.mboard-view .btn-area:after, .mboard-view .btn-area:before { content: " "; display: table }
+.mboard-view .btn-area:after { clear: both }
+.mboard-view .btn-area button[type=button] { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; float: right; display: block; width: 75px; font-size: 1.2em }
+.mboard-view .btn-area button[type=button]:first-child { float: left }
+.mboard-view .btn-area button[type=button].btn-success { margin-right: 5px; background-color: #47c3b6; border-color: #47c3b6; color: #fff }
+.mboard-view .btn-area a.btn-default { box-sizing: border-box; background-color: #f7f7f7; color: #000; padding: 0; cursor: pointer; height: 40px; line-height: 40px; font-size: 1.3em; text-align: center; vertical-align: middle; white-space: nowrap; border: 1px solid #bbb; text-decoration: none; float: left; display: block; width: 75px; font-size: 1.2em }
