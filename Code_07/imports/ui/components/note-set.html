@@ -1,0 +1,74 @@
+<template name="noteSearch">
+   <!-- Note Search -->
+   {{> EasySearch.Input index=notesIndex attributes=inputAttributes}}
+   <label class="label-icon" for="noteSearch"><i class="material-icons">search</i></label>
+</template>
+<template name="noteInput">
+   <!-- Note Input -->
+   <div class="row input-container">
+      <div class="input-field col s12 l6 offset-l3">
+         {{#autoForm collection="Notes" id="newNote" type="insert"}}
+         {{> afFieldInput name="owner"}}
+         {{> afFieldInput name="createdAt"}}
+         <i class="material-icons prefix">edit</i>
+         {{> afFieldInput name="text" id="noteField" class="materialize-textarea"}}
+         <label for="noteField">{{afFieldLabelText name='text'}}</label>
+         <button tabindex="2" class="note-submit btn waves-effect waves-light right disabled" type="submit" onclick="Materialize.toast('Flow!', 3000, 'rounded')"><i class="material-icons">send</i></button>
+         {{/autoForm}}
+         <span class="text-count">{{textCount}}</span>
+      </div>
+   </div>
+</template>
+<template name="noteList">
+   {{#EasySearch.IfInputEmpty index=notesIndex}}
+   <!-- Note Message -->
+   <p class="note-message center-align">{{noteMessage}}</p>
+   {{else}}
+   <!-- Note Result -->
+   {{#if resultsCount}}
+   <p class="search-message center-align"><strong>{{resultsCount}}</strong> results!</p>
+   {{/if}}
+   {{/EasySearch.IfInputEmpty}}
+   <!-- Note Searching -->
+   {{#EasySearch.IfSearching index=notesIndex}}
+   <p class="search-message center-align">Searching...</p>
+   {{/EasySearch.IfSearching}}
+   <!-- Note List -->
+   <div class="row list-container">
+      {{#EasySearch.Each index=notesIndex}}
+      {{> noteItem}}
+      {{/EasySearch.Each}}
+   </div>
+   <!-- Note No Result -->
+   {{#EasySearch.IfNoResults index=notesIndex}}
+   <p class="search-message center-align">{{noResultMessage}}</p>
+   {{/EasySearch.IfNoResults}}
+   <!-- Note Load More -->
+   <div class="load-more center-align">
+      {{> EasySearch.LoadMore index=notesIndex attributes=loadMoreAttributes}}
+   </div>
+   {{! > EasySearch.Pagination index=notesIndex maxPages=10}}
+   <!-- Note Modal -->
+   <div id="modal" class="modal">
+      <div class="modal-content">
+         <p class="word">{{modalContent}}</p>
+      </div>
+      <div class="modal-footer">
+         <a href="#!" class="modal-action modal-close waves-effect btn-flat">Close</a>
+      </div>
+   </div>
+</template>
+<template name="noteItem">
+   <div class="col item s12 l6">
+      <div class="card hoverable">
+         <div class="card-content">
+            <p class="note-text word">{{text}}</p>
+         </div>
+         <div class="card-action">
+            <a href="#modal" class="modal-trigger"><i class="material-icons">filter_none</i></a>
+            <a href="#" class="note-remove" onclick="Materialize.toast('Delete!', 3000, 'rounded');"><i class="material-icons">delete_forever</i></a>
+            <span>{{dateFormater createdAt}}</span>
+         </div>
+      </div>
+   </div>
+</template>

@@ -1,0 +1,29 @@
+.login-link-text, .login-close-text {
+  display: none; }
+
+h1 {
+  display: none; }
+
+h5 {
+  margin-bottom: 30px; }
+  h5 strong {
+    color: red; }
+
+main {
+  padding: 30px 10px 60px 10px; }
+  @media (max-width: 600px) {
+    main {
+      padding-left: 0;
+      padding-right: 0; } }
+
+.card-content {
+  height: 100px;
+  overflow-y: auto; }
+
+.card-action span {
+  float: right; }
+
+.load-more {
+  padding-top: 20px; }
+
+/*# sourceMappingURL=style.css.map */

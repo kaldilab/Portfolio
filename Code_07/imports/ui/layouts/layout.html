@@ -1,0 +1,51 @@
+<!-- layout -->
+<template name="layout">
+	<div id="wrapper">
+		{{> Template.dynamic template=top}}
+		{{> Template.dynamic template=main}}
+		{{> Template.dynamic template=sidebar}}
+	</div>
+</template>
+<!-- header -->
+<template name="header">
+	<header class="navbar-fixed">
+		<h1>Note Flow</h1>
+		<nav class="pink">
+			<div class="nav-wrapper">
+				<a href="#!" class="brand-logo center">Note Flow</a>
+				<form>
+					<div class="input-field">
+						{{> noteSearch}}
+						<i class="material-icons">close</i>
+					</div>
+				</form>
+			</div>
+		</nav>
+	</header>
+</template>
+<!-- home -->
+<template name="home">
+	<main>
+		{{> noteInput}}
+		{{> noteList}}
+	</main>
+</template>
+<!-- login -->
+<template name="login">
+	<section class="valign-wrapper">
+		<div class="login-container card z-depth-5">
+			<p class="title">WELCOM TO<br><strong>Note Flow</strong></p>
+			<p class="test">ID: test / PW: 123456</p>
+			{{> loginButtons}}
+			{{#if currentUser}}
+			<a class="login-button" href="/">Home</a>
+			{{/if}}
+		</div>
+	</section>
+</template>
+<!-- sidebar -->
+<template name="sidebar">
+	<section>
+		{{> side}}
+	</section>
+</template>
