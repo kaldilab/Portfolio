@@ -1,0 +1,342 @@
+@charset "utf-8";
+@import "_mixins.less";
+
+// ================================
+@media @MT {
+	#fixed-header.shrink {
+		.head-pack-1 {
+			.head-grid-2 {
+				.head-child-2 {
+					>ul>li {
+						>a {
+							.h(50px);
+							.lh(50px);
+						}
+					}
+				}
+			}
+		}
+	}
+	.wrapper-head {
+		.h(60px);
+
+		.head-pack-1 {
+			.h(60px);
+
+			h1.head-grid-1 {
+				.grid(10);
+				.pl(1em);
+
+				a {
+					.h(60px);
+					.lh(60px);
+					.fs(1.5em);
+					.ff(@na01);
+					.caf(@c04);
+					#TSF.vb(0px, 0px, @c08);
+
+					img.mark {
+						.quad(30px, auto);
+					}
+				}
+			}
+			.head-grid-2 {
+				.grid(2, @i: static);
+
+				.head-child-1 {
+					.child(2, 2);
+					.di();
+					.h(60px);
+					.lh(60px);
+					.fs(1.6em);
+					.ta(right);
+					.caf(@c08);
+					#TT.t();
+
+					p {
+						.mr(20%);
+						.w(80%);
+
+						span {
+							.di();
+							.w(100%);
+							.cu(pointer);
+							#TT.t();
+
+							&:hover {
+								.caf(@c02);
+							}
+						}
+					}
+				}
+				.head-child-2 {
+					.child(2, 2, @i: absolute);
+					.loa2(60px);
+					.ptb(1em);
+					.bcf(@c06);
+					.di(none);
+					#BDF.t(1px, @c03);
+					#BSF.vb(1px, 1px, @c03);
+
+					>ul>li {
+						.w(42%);
+						.plr(4%);
+						.ptb(2%);
+
+						>a {
+							.w(100%);
+							.h(50px);
+							.fs(1em);
+							.lh(50px);
+							#BDF.all(1px, @c01);
+							#BR.all(5px);
+						}
+					}
+				}
+			}
+		}
+	}
+	// --------------------------------
+	.minomiro_hello {
+		.h(60px);
+		.lh(60px);
+	}
+	// --------------------------------
+	.wrapper-visual {
+		.visual-pack-1 {
+			.visual-grid-1 {
+				#slider1 {
+					.h(auto);
+
+					a.slide {
+						.plr(1em);
+
+						h2 {
+							.w(50%);
+						}
+						p {
+							.mt(2em);
+							.ta(justify);
+
+							span {
+								.di(inline);
+							}
+						}
+					}
+					.img1 {
+						#BG.irps(url('http://minomiro.com/xe/layouts/kaldi_layout/img/slide1.png'), auto 150px, 90% 10%);
+					}
+					.img2 {
+						#BG.irps(url('http://minomiro.com/xe/layouts/kaldi_layout/img/slide2.png'), auto 150px, 90% 10%);
+					}
+					.img3 {
+						#BG.irps(url('http://minomiro.com/xe/layouts/kaldi_layout/img/slide3.png'), auto 150px, 90% 10%);
+					}
+				}
+			}
+		}
+	}
+	// --------------------------------
+	.wrapper-service {
+		.service-pack-1 {
+			.pt(2.5em);
+			.pb(1em);
+
+			.service-grid-1 {
+				.grid(6);
+				.mtb(1em);
+
+				a {
+					span.icon {
+						.di(block);
+						.mlr(auto);
+					}
+					span.tit {
+						.di(block);
+						.mt(.5em);
+						.mlr(auto);
+						.fs(1.3em);
+					}
+				}
+			}
+			.phone {
+				.di();
+			}
+		}
+	}
+	// --------------------------------
+	.wrapper-news {
+		#LGF#D12.p2(@c05, 69%, @c05, 69%);
+
+		.news-pack-1 {
+			.pb(0em) !important;
+
+			// ================================
+			// NEWS 타이틀
+			div.news {
+				.grid() !important;
+			}
+			// ================================
+			// 상담하기, 공지 위젯
+			div.counsel, div.notice {
+				.grid(12, 0, 0) !important;
+				.bcf(@c03) !important;
+				.ptb(2em) !important;
+			}
+		}
+	}
+	// --------------------------------
+	.wrapper-foot {
+		.foot-pack-1 {
+			ul.foot-grid-1 {
+				.grid(@p: 1em);
+
+				li.miro {
+					.fs(1em);
+				}
+				li.link {
+					.ta();
+				}
+			}
+			ul.foot-grid-2 {
+				.grid(@p: 1em);
+
+				form.search {
+					.ta();
+
+					input {
+						.plr(0em);
+					}
+					input[type=text] {
+						.w(60%);
+
+						&:focus {
+							.w(60%);
+						}
+					}
+				}
+				li.copyright {
+					.mt(3em);
+					.ta();
+
+					span {
+						.di();
+					}
+				}
+			}
+		}
+	}
+	// --------------------------------
+	.wrapper-sub {
+		.sub-pack-1 {
+			.fs(1em);
+
+			ul.page {
+				.grid(12);
+				.ta();
+			}
+			ul.location {
+				.grid(@d: none);
+			}
+		}
+		.sub-pack-2 {
+			.mtb(2em);
+
+			.sub-grid-1 {
+				.grid(12);
+
+				// 게시판 안내문구
+				p.counsel {
+					.child(12, 12, 1em);
+					#BDF.l(0px, @c01);
+				}
+				p.counsel_tel {
+					.child(12, 12);
+
+					a {
+						.mr(auto);
+					}
+				}
+				p.miro_info {
+					#BDF.l(0px, @c01);
+				}
+			}
+		}
+	}
+}
+@media @T2 {
+	.wrapper-news {
+		.news-pack-1 {
+			// ================================
+			// 활동 위젯
+			div.action {
+				.grid(@m: 0) !important;
+				.mb(3em) !important;
+
+				div.widgetContainer ul {
+					li {
+						.child(12, 12, 0) !important;
+						.h(9em) !important;
+
+						&:nth-child(3) {
+							.mb(2em) !important;
+							#BDF.b(1px, @c03) !important;
+						}
+						p.thumbArea {
+							.quad(160px, 120px) !important;
+
+							a.thumb {
+								.quad(160px, 120px) !important;
+							}
+						}
+						p.titleArea {
+							.ml(180px) !important;
+						}
+						p.text {
+							.ml(180px) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media @M {
+	.wrapper-news {
+		.news-pack-1 {
+			// ================================
+			// 활동 위젯
+			div.action {
+				.grid(@m: 0) !important;
+				.mb(3em) !important;
+
+				div.widgetContainer ul {
+					li {
+						.child(12, 12, 0) !important;
+						.h(24em) !important;
+
+						&:nth-child(3) {
+							.mb(2em) !important;
+							#BDF.b(1px, @c03) !important;
+						}
+						p.thumbArea {
+							.quad(100%, 200px) !important;
+							.fl(none) !important;
+
+							a.thumb {
+								.quad(100%, 220px) !important;
+							}
+						}
+						p.titleArea {
+							.mt(2em);
+							.ml(0) !important;
+						}
+						p.text {
+							.ml(0) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

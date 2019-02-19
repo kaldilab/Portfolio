@@ -1,0 +1,165 @@
+<load target="kaldi_layout.css" />
+<div class="container">
+	<!-- head -->
+	<div id="fixed-header">
+		<div class="wrapper-head">
+			<div class="head-pack-1">
+				<!-- 타이틀 -->
+				<h1 class="head-grid-1">
+				<a href="{geturl('')}" id="siteTitle">
+					<img class="mark" src="/xe/layouts/kaldi_layout/img/mark.png" alt="미로찾기">
+					<img src="siteTitle.png" alt="XpressEngine" cond="!Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">
+					<block cond="Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">{Context::getSiteTitle()}</block>
+					<img src="{$layout_info->LOGO_IMG}" alt="{$layout_info->LOGO_TEXT}" cond="$layout_info->LOGO_IMG">
+					<block cond="!$layout_info->LOGO_IMG && $layout_info->LOGO_TEXT">{$layout_info->LOGO_TEXT}</block>
+				</a>
+				</h1>
+				<!-- /타이틀 -->
+				<!-- 메뉴 -->
+				<div class="head-grid-2">
+					<!-- 모바일 메뉴버튼 -->
+					<div class="head-child-1">
+						<p id="menu" title="MENU"><span class="essential-ui-text156 essential-ui-cross106"></span></p>
+					</div>
+					<!-- 모바일 메뉴버튼 -->
+					<div id="nav" class="head-child-2">
+						<ul>
+							<li loop="$global_menu->list=>$key1,$val1" class="active"|cond="$val1['selected']">
+								<a href="{$val1['href']}" target="_blank"|cond="$val1['open_window']=='Y'">{$val1['link']}</a>
+								<ul cond="$val1['list']" class="sub_nav">
+									<li loop="$val1['list']=>$key2,$val2" class="active"|cond="$val2['selected']">
+										<a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /메뉴 -->
+			</div>
+		</div>
+	</div>
+	<!-- /head -->
+	<!-- hello -->
+	<div class="minomiro_hello">미디어 비정규 노동자 권리찾기</div>
+	<!-- hello -->
+	<!-- visual -->
+	<div class="wrapper-visual">
+		<div class="visual-pack-1">
+			<div class="visual-grid-1">
+				<div class="cycle-slideshow" id="slider1" data-cycle-fx="scrollHorz" data-cycle-timeout="10000" data-cycle-speed="1000" data-cycle-slides=">.slide" data-cycle-pause-on-hover="true" data-cycle-pager=".slider1-multipager" data-cycle-pager-event="mouseover" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-manual-speed="200">
+					<!-- data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-manual-speed="200" -->
+					<!-- data-cycle-glide="true" data-cycle-manual-speed="100" -->
+					<a href="http://minomiro.com/xe/page_ucHh13" class="slide img1">
+						<h2>미로찾기는</h2>
+						<p>
+						<span>미디어산업에 종사하는 노동자 절반은 비정규직!</span>
+						<span>미로찾기는 <b>‘미디어 비정규 노동자 권리찾기’</b>의 줄임말로</span>
+						<span>고용불안과 저임금, 장시간 노동에 시달리는 미디어 비정규 노동자들의</span>
+						<span>권리를 찾기 위해 전국언론노동조합이 발족한 사업단입니다.</span>
+						</p>
+						<p>미로에 갇힌 우리, 함께 출구를 찾아 나갑시다!</p>
+					</a>
+					<a href="http://minomiro.com/xe/board_NZdY82" class="slide img2">
+						<h2>미로상담소는</h2>
+						<p>
+						<span>미디어 비정규 노동자들에게 특화된 맞춤형 상담소가 떴다!</span>
+						<span>미로 상담소는 미디어 비정규 노동자들이 스스로 권리를 찾을 수 있도록</span>
+						<span><b>365일 24시간 전화 상담 / 온라인 게시판 상담</b>을 무료로 제공하고 있습니다.</span>
+						</p>
+						<p>억울한 일, 화나는 일 언제든지 미로상담소와 함께 풀어 나갑시다!</p>
+					</a>
+					<a href="http://minomiro.com/xe/board_Miwv04" class="slide img3">
+						<h2>미로수첩은</h2>
+						<p>
+						<span>알아두면 힘이 되는 미디어 비정규 노동자 지킴이 수첩이 내 손 안에!</span>
+						<span>미로수첩은 미디어 비정규 노동자들이 실제 일터에서 겪는 사례를 중심으로</span>
+						<span><b>관련 법률을 알기 쉽게 구성한 노동법 수첩</b>입니다.</span>
+						</p>
+						<p>미로수첩을 통해 우리 모두 노동법 전문가가 되어 봅시다!</p>
+					</a>
+					<div class="slider1-multipager"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /visual -->
+	<!-- service -->
+	<div class="wrapper-service">
+		<div class="service-pack-1">
+			<h2>미로찾기</h2>
+			<div class="service-grid-1 phone">
+				<a href="Tel:1670-7286"><span class="essential-ui-smartphone32 icon"></span> <span class="tit">전화하기</span></a>
+			</div>
+			<div class="service-grid-1 board">
+				<a href="http://minomiro.com/xe/board_NZdY82"><span class="essential-ui-chat97 icon"></span> <span class="tit">미로상담소</span></a>
+			</div>
+			<div class="service-grid-1 worker">
+				<a href="http://minomiro.com/xe/board_Miwv04"><span class="essential-ui-zoom77 icon"></span> <span class="tit">미로수첩</span></a>
+			</div>
+			<div class="service-grid-1 mino">
+				<a href="http://minomiro.com/xe/page_ucHh13"><span class="essential-ui-info27 icon"></span> <span class="tit">미로찾기</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- /service -->
+	<!-- news, board -->
+	<div class="wrapper-news">
+		<div class="news-pack-1">
+			{$content}
+		</div>
+	</div>
+	<!-- /news, board -->
+	<!-- sub -->
+	<div class="wrapper-sub">
+		<div class="sub-pack-1">
+			<ul class="page">
+				<li class="title">{$module_info->browser_title}<span class="mini">미로찾기</span></li>
+			</ul>
+			<ul class="location">
+				<li class="home">{Context::getSiteTitle()}</li>
+				<span class="elegant_font-chevron9"></span>
+				<li class="sub">{$module_info->browser_title}</li>
+			</ul>
+		</div>
+		<div class="sub-pack-2">
+			<div class="sub-grid-1">
+				{$content}
+			</div>
+		</div>
+	</div>
+	<!-- /sub -->
+	<!-- foot -->
+	<div class="wrapper-foot">
+		<div class="foot-pack-1">
+			<h2>미로찾기</h2>
+			<ul class="foot-grid-1">
+				<li class="miro"><b>미로찾기</b>는 고용불안과 저임금, 장시간 노동에 시달리는 미디어 비정규 노동자들의 권리를 찾기 위해 전국언론노동조합이 발족한 사업단이며, 미디어산업에 종사하는 노동자라면, 누구나 참여 및 가입할 수 있습니다.
+				</li>
+				<li class="link">
+					<a href="#" title="Twitter" target="_blank"><span class="elegant_font-social71"></span></a>
+					<a href="#" title="Facebook" target="_blank"><span class="elegant_font-facebook7"></span></a>
+					<a href="http://media.nodong.org" title="전국언론노동조합" target="_blank"><img src="/xe/layouts/kaldi_layout/img/nojo.png" alt="전국언론노동조합"></a>
+				</li>
+			</ul>
+			<ul class="foot-grid-2">
+				<form action="{getUrl()}" method="get" class="search">
+					<input type="hidden" name="vid" value="{$vid}" />
+					<input type="hidden" name="mid" value="{$mid=page_vDbu74}" />
+					<input type="hidden" name="act" value="IS" />
+					<input type="text" name="is_keyword" value="{$is_keyword}" title="{$lang->cmd_search}" />
+					<input type="submit" value="{$lang->cmd_search}" />
+				</form>
+				<li><span class="elegant_font-small72"></span> 서울특별시 중구 태평로 1가 25번지 한국언론회관 1802호</li>
+				<li><span class="elegant_font-mail9"></span> minomiro@naver.com</li>
+				<li><span class="elegant_font-telephone1"></span> 1670-7286</li>
+				<li><span class="elegant_font-documents"></span> 02-735-9400</li>
+				<li class="copyright">Copyright <a href="http://minomiro.com/xe/index.php?module=admin" alt="Admin" title="관리자모드">ⓒ</a>2015 전국언론노동조합. <span>All rights reserved.</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- foot -->
+	<!-- scroll to top -->
+	<p class="scrollToTop" title="TOP"><span class="elegant_font-small68"></span></p>
+	<!-- /scroll to top -->
+</div>
