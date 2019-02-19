@@ -1,0 +1,174 @@
+<load target="kaldi_layout.css" />
+<div class="container">
+<div id="fixed-header">
+<div class="wrapper-head">
+<div class="head-pack-1">
+<h1 class="head-grid-1">
+<a href="{geturl('')}" id="siteTitle">
+<img class="mark" src="/xe/layouts/kaldi_layout/img/hanbitcenter.png" alt="한빛미디어노동인권센터">
+<img src="siteTitle.png" alt="XpressEngine" cond="!Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">
+<span class="title">
+<em class="sub-title">방송환경개선을 위한 한 줄기의 빛</em>
+<em class="main-title"><block cond="Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">{Context::getSiteTitle()}</block></em>
+</span>
+<img src="{$layout_info->LOGO_IMG}" alt="{$layout_info->LOGO_TEXT}" cond="$layout_info->LOGO_IMG">
+<block cond="!$layout_info->LOGO_IMG && $layout_info->LOGO_TEXT">{$layout_info->LOGO_TEXT}</block>
+</a>
+</h1>
+<div class="head-grid-2">
+<div class="head-child-1">
+<p id="menu" title="MENU"><span class="essential-ui-text156 essential-ui-cross106"></span></p>
+</div>
+<div id="nav" class="head-child-2">
+<ul>
+<li loop="$global_menu->list=>$key1,$val1" class="active"|cond="$val1['selected']">
+<a href="{$val1['href']}" target="_blank"|cond="$val1['open_window']=='Y'">{$val1['link']}</a>
+<ul cond="$val1['list']" class="sub_nav">
+<li loop="$val1['list']=>$key2,$val2" class="active"|cond="$val2['selected']">
+<a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="minomiro_hello">방송환경개선을 위한 한 줄기의 빛</div>
+<div class="wrapper-visual">
+<div class="visual-pack-1">
+<div class="visual-grid-1">
+<div class="cycle-slideshow" id="slider1" data-cycle-fx="scrollHorz" data-cycle-timeout="10000" data-cycle-speed="1000" data-cycle-slides=">.slide" data-cycle-pause-on-hover="true" data-cycle-pager=".slider1-multipager" data-cycle-pager-event="mouseover" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-manual-speed="1000">
+
+
+
+
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 슬라이더 이미지/텍스트 수정 시작 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<!-- url() : 괄호 안에 이미지 경로를 붙여넣으세요. 괄호 밖의 문자들은 절대 삭제 금지! -->
+<!-- href="" : 따옴표 안에 페이지 경로를 붙여넣으세요. 따옴표 밖의 문자들은 절대 삭제 금지! -->
+
+<!-- ︎ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 슬라이드 1번 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<a class="slide img1" style="background-image:
+url(http://minomiro.com/xe/layouts/kaldi_layout/img/slide1.jpeg)"
+href="/xe/page_wFTQ97">
+
+<div class="inner">
+<h2>제보센터</h2>
+<p>
+<span><b>故이한빛PD</b>의 뜻을 실현하고</span>
+<span>열악한 제작환경에서 근무하고 있는 방송사 비정규직 노동자와</span>
+<span>취약계층 노동자들의 권익보호와 복지향상을 위해 만들었습니다.</span>
+<span>모든 방송제작노동자들이 자유롭게 노동할 권리가 있고,</span>
+<span>인간답게 살아야하며 행복을 추구할 권리가 보장되기를 바랍니다.</span>
+</p>
+</div>
+
+</a>
+
+
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 슬라이드 2번 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<a class="slide img1" style="background-image:
+url(http://minomiro.com/xe/layouts/kaldi_layout/img/slide2.jpeg)"
+href="/xe/board_NZdY82">
+
+<div class="inner">
+<h2>신고센터</h2>
+<p>
+<span>이한빛PD의 죽음으로 만들어졌고, 방송노동환경 개선을 위해 부활했습니다.</span>
+<span>관행이란 이름으로 묵인되어 온 장시간노동은 없어져야 하며, </span>
+<span>모든 방송제작노동자들의 인격은 존중되어야 합니다.</span>
+<span>비정규직 노동자들의 희생과 눈물을 닦지 않고 방송의 정상화는 완성되지 않습니다.</span>
+</p>
+</div>
+
+</a>
+
+
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 슬라이드 3번 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<a class="slide img1" style="background-image:
+url(http://minomiro.com/xe/layouts/kaldi_layout/img/slide3.jpeg)"
+href="https://www.ihappynanum.com/Nanum/nanum/banner/bridge/82TJ1ORLSA.nanum?memPayType=null">
+
+<div class="inner">
+<h2>후원하기</h2>
+<p>
+<span>방송제작환경 감시와 개선을 위한 미디어신문고 운영</span>
+<span>노동상담 및 피해 구제 지원</span>
+<span>근로기준법 등 노동법 교실 및 노동조합 조직화 지원</span>
+<span>노동인권교육 및 미디어산업 노동인권선언 추진</span>
+<span>직무능력 향상을 위한 교육 프로그램 진행</span>
+<span>이한빛 상 및 장학금 수여</span>
+<span>연말 ‘방송제작대상’ 지원</span>
+</p>
+</div>
+
+</a>
+
+
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 슬라이더 이미지/텍스트 수정 끝 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+
+
+
+
+<div class="slider1-multipager"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrapper-service">
+<div class="service-pack-1">
+<h2>미로찾기</h2>
+<div class="service-grid-1 kakao">
+<a href="http://pf.kakao.com/_xawcdC"><img src="/xe/layouts/kaldi_layout/img/service1.png" alt=""><br><span class="tit">1:1 상담</span></a>
+</div>
+<div class="service-grid-1 facebook">
+<a href="https://www.facebook.com/hanbitlaborcenter"><img src="/xe/layouts/kaldi_layout/img/service2.png" alt=""><br><span class="tit">페이스북</span></a>
+</div>
+<div class="service-grid-1 counsel">
+<a href="/xe/board_NZdY82"><img src="/xe/layouts/kaldi_layout/img/service3.png" alt=""><br><span class="tit">미디어신문고</span></a>
+</div>
+<div class="service-grid-1 sponsor1">
+<a href="https://www.ihappynanum.com/Nanum/B/82TJ1ORLSA"><img src="/xe/layouts/kaldi_layout/img/service4.png" alt=""><br><span class="tit">일시후원</span></a>
+</div>
+<div class="service-grid-1 sponsor2">
+<a href="https://www.ihappynanum.com/Nanum/B/82TJ1ORLSA"><img src="/xe/layouts/kaldi_layout/img/service5.png" alt=""><br><span class="tit">정기후원</span></a>
+</div>
+</div>
+</div>
+<div class="wrapper-news">
+<div class="news-pack-1">
+{$content}
+</div>
+</div>
+<div class="wrapper-foot">
+<div class="foot-pack-1">
+<h2>미로찾기</h2>
+<ul class="foot-grid-1">
+<li class="miro"><b>한빛미디어노동인권센터</b>는 故이한빛 PD의 뜻을 계승하여 미디어제작 노동자들의 노동권과 인간다운 삶을 위한 권리, 행복을 추구할 권리 확보를 위해 노력하겠습니다.
+</li>
+<li class="link">
+<!--<a href="https://twitter.com/minomiroworker" title="Twitter" target="_blank"><span class="elegant_font-social71"></span></a>-->
+<a href="https://www.facebook.com/hanbitlaborcenter" title="Facebook" target="_blank"><span class="elegant_font-facebook7"></span></a>
+<a href="https://www.facebook.com/hanbit.mediacenter" title="Facebook" target="_blank"><span class="elegant_font-facebook7"></span></a>
+</li>
+</ul>
+<ul class="foot-grid-2">
+<form action="{getUrl()}" method="get" class="search">
+<input type="hidden" name="vid" value="{$vid}" />
+<input type="hidden" name="mid" value="{$mid=page_vDbu74}" />
+<input type="hidden" name="act" value="IS" />
+<input type="text" name="is_keyword" value="{$is_keyword}" title="{$lang->cmd_search}" />
+<input type="submit" value="{$lang->cmd_search}" />
+</form>
+<li><span class="elegant_font-small72"></span> 서울시 마포구 성미산로1길 26-9, 403호(성산동)</li>
+<li><span class="elegant_font-mail9"></span> hanbitcenter@gmail.com</li>
+<li><span class="elegant_font-telephone1"></span> 1833-8261</li>
+<li><span class="elegant_font-documents"></span> 02-735-9400</li>
+<li class="copyright">Copyright <a href="/xe/index.php?module=admin" alt="Admin" title="관리자모드">ⓒ</a>2018 한빛미디어노동인권센터 <span>All rights reserved.</span></li>
+</ul>
+</div>
+</div>
+<p class="scrollToTop" title="TOP"><span class="elegant_font-small68"></span></p>
+</div>

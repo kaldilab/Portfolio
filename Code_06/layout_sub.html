@@ -1,0 +1,102 @@
+<load target="kaldi_layout.css" />
+<div class="container">
+	<!-- head -->
+	<div id="fixed-header">
+		<div class="wrapper-head">
+			<div class="head-pack-1">
+				<!-- 타이틀 -->
+				<h1 class="head-grid-1">
+				<a href="{geturl('')}" id="siteTitle">
+					<img class="mark" src="/xe/layouts/kaldi_layout/img/hanbitcenter.png" alt="한빛미디어노동인권센터">
+					<img src="siteTitle.png" alt="XpressEngine" cond="!Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">
+					<span class="title">
+						<em class="sub-title">방송환경개선을 위한 한 줄기의 빛</em>
+						<em class="main-title"><block cond="Context::getSiteTitle() && !$layout_info->LOGO_IMG && !$layout_info->LOGO_TEXT">{Context::getSiteTitle()}</block></em>
+					</span>
+					<img src="{$layout_info->LOGO_IMG}" alt="{$layout_info->LOGO_TEXT}" cond="$layout_info->LOGO_IMG">
+					<block cond="!$layout_info->LOGO_IMG && $layout_info->LOGO_TEXT">{$layout_info->LOGO_TEXT}</block>
+				</a>
+				</h1>
+				<!-- /타이틀 -->
+				<!-- 메뉴 -->
+				<div class="head-grid-2">
+					<!-- 모바일 메뉴버튼 -->
+					<div class="head-child-1">
+						<p id="menu" title="MENU"><span class="essential-ui-text156 essential-ui-cross106"></span></p>
+					</div>
+					<!-- 모바일 메뉴버튼 -->
+					<div id="nav" class="head-child-2">
+						<ul>
+							<li loop="$global_menu->list=>$key1,$val1" class="active"|cond="$val1['selected']">
+								<a href="{$val1['href']}" target="_blank"|cond="$val1['open_window']=='Y'">{$val1['link']}</a>
+								<ul cond="$val1['list']" class="sub_nav">
+									<li loop="$val1['list']=>$key2,$val2" class="active"|cond="$val2['selected']">
+										<a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /메뉴 -->
+			</div>
+		</div>
+	</div>
+	<!-- /head -->
+	<!-- hello -->
+	<div class="minomiro_hello">방송환경개선을 위한 한 줄기의 빛</div>
+	<!-- hello -->
+	<!-- sub -->
+	<div class="wrapper-sub">
+		<div class="sub-pack-1">
+			<ul class="page">
+				<li class="title">{$module_info->browser_title}<span class="mini">미로찾기</span></li>
+			</ul>
+			<ul class="location">
+				<li class="home">{Context::getSiteTitle()}</li>
+				<span class="elegant_font-chevron9"></span>
+				<li class="sub">{$module_info->browser_title}</li>
+			</ul>
+		</div>
+		<div class="sub-pack-2">
+			<div class="sub-grid-1">
+				{$content}
+			</div>
+		</div>
+	</div>
+	<!-- /sub -->
+	<!-- foot -->
+	<div class="wrapper-foot">
+		<div class="foot-pack-1">
+			<h2>미로찾기</h2>
+			<ul class="foot-grid-1">
+				<li class="miro"><b>한빛미디어노동인권센터</b>는 故이한빛 PD의 뜻을 계승하여 미디어제작 노동자들의 노동권과 인간다운 삶을 위한 권리, 행복을 추구할 권리 확보를 위해 노력하겠습니다.
+				</li>
+				<li class="link">
+					<!--<a href="https://twitter.com/minomiroworker" title="Twitter" target="_blank"><span class="elegant_font-social71"></span></a>-->
+					<a href="https://www.facebook.com/hanbitlaborcenter" title="Facebook" target="_blank"><span class="elegant_font-facebook7"></span></a>
+					<a href="https://www.facebook.com/hanbit.mediacenter" title="Facebook" target="_blank"><span class="elegant_font-facebook7"></span></a>
+					<a href="http://media.nodong.org" title="전국언론노동조합" target="_blank"><img src="/xe/layouts/kaldi_layout/img/nojo.png" alt="전국언론노동조합"></a>
+				</li>
+			</ul>
+			<ul class="foot-grid-2">
+				<form action="{getUrl()}" method="get" class="search">
+					<input type="hidden" name="vid" value="{$vid}" />
+					<input type="hidden" name="mid" value="{$mid=page_vDbu74}" />
+					<input type="hidden" name="act" value="IS" />
+					<input type="text" name="is_keyword" value="{$is_keyword}" title="{$lang->cmd_search}" />
+					<input type="submit" value="{$lang->cmd_search}" />
+				</form>
+				<li><span class="elegant_font-small72"></span> 서울시 마포구 성미산로1길 26-9, 403호(성산동)</li>
+				<li><span class="elegant_font-mail9"></span> hanbitcenter@gmail.com</li>
+				<li><span class="elegant_font-telephone1"></span> 1833-8261</li>
+				<li><span class="elegant_font-documents"></span> 02-735-9400</li>
+				<li class="copyright">Copyright <a href="/xe/index.php?module=admin" alt="Admin" title="관리자모드">ⓒ</a>2018 한빛미디어노동인권센터 <span>All rights reserved.</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- foot -->
+	<!-- scroll to top -->
+	<p class="scrollToTop" title="TOP"><span class="elegant_font-small68"></span></p>
+	<!-- /scroll to top -->
+</div>
