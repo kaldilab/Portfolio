@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+// var
+$width: 1168px;
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px;
+
+// font
+$notosanskr: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple Gothic",
+  Helvetica, Arial, sans-serif;
+$roboto: "Roboto", "맑은 고딕", "Malgun Gothic", "Apple Gothic", Helvetica,
+  Arial, sans-serif;
+
+// media
+$media-sm: "(min-width: #{$width-sm})";
+$media-md: "(min-width: #{$width-md})";
+$media-lg: "(min-width: #{$width-lg})";
+$media-xl: "(min-width: #{$width-xl})";
+
+// color
+$co_white: #fff;
+$co_black: #000;
+$co_default: #333;
+$co_disabled: #999;
+
+// body
+body {
+  font-size: 16px;
+  font-family: $notosanskr;
+  color: $co_default;
+}
+* {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+dl,
+dt,
+dd,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $co_default;
+  }
+}
+img {
+  display: inline-block;
+  vertical-align: top;
+}
+figure {
+  margin: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+// color
+.co_white {
+  color: $co_white;
+}
+.co_black {
+  color: $co_black;
+}
+
+// background-color
+.bg_white {
+  background-color: $co_white;
+}
+.bg_black {
+  background-color: $co_black;
+}
+
+// btn
+.btn_wrap {
+  text-align: center;
+}
+.btn {
+  transition: 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:active,
+  &[disabled] {
+    background-color: $co_disabled;
+    &:hover {
+      background-color: $co_disabled;
+    }
+  }
+}
+
+// form
+.form-control {
+  color: $co_default;
+  &::placeholder {
+    color: #ccc;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: #ccc;
+  }
+  &::-ms-input-placeholder {
+    color: #ccc;
+  }
+  &[disabled] {
+    background-color: $co_disabled;
+  }
+}
+
+// truncate
+.multi-truncate-2 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.multi-truncate-3 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin multi-truncate-2 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin multi-truncate-3 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// delay
+.delay-_1s {
+  animation-delay: 0.1s;
+}
+.delay-_2s {
+  animation-delay: 0.2s;
+}
+.delay-_3s {
+  animation-delay: 0.3s;
+}
+.delay-_4s {
+  animation-delay: 0.4s;
+}
+.delay-_5s {
+  animation-delay: 0.5s;
+}
+.delay-_6s {
+  animation-delay: 0.6s;
+}
+.delay-_7s {
+  animation-delay: 0.7s;
+}
+.delay-_8s {
+  animation-delay: 0.8s;
+}
+.delay-_9s {
+  animation-delay: 0.9s;
+}
+.delay-1_1s {
+  animation-delay: 1.1s;
+}
+.delay-1_2s {
+  animation-delay: 1.2s;
+}
+.delay-1_3s {
+  animation-delay: 1.3s;
+}
+.delay-1_4s {
+  animation-delay: 1.4s;
+}
+.delay-1_5s {
+  animation-delay: 1.5s;
+}
+.delay-1_6s {
+  animation-delay: 1.6s;
+}
+.delay-1_7s {
+  animation-delay: 1.7s;
+}
+.delay-1_8s {
+  animation-delay: 1.8s;
+}
+.delay-1_9s {
+  animation-delay: 1.9s;
+}
+
+// utillity
+.pc {
+  display: block;
+}
+.pc-ib {
+  display: inline-block;
+}
+.mo {
+  display: none;
+}
+@media #{$media-md} {
+  .pc {
+    display: none;
+  }
+  .mo {
+    display: block;
+  }
+  .mo-ib {
+    display: inline-block;
+  }
+}
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// modal
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $co_white;
+  z-index: 9999;
+  display: none;
+}
+.modal__dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $co_black;
+  opacity: 0.6;
+  z-index: 999;
+  display: none;
+}
+
+// accesibility
+.accesibility {
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  &:focus {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #e83820;
+    text-align: center;
+    z-index: 9999;
+  }
+}

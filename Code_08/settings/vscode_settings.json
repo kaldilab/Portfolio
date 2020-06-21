@@ -1,0 +1,16 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.lineHeight": 15,
+  "editor.scrollBeyondLastLine": true,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "editor.wordWrap": "on",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "savePath": "~/../css"
+    }
+  ],
+}
