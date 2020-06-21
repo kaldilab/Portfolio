@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>component</title>
+    <style>
+      h1,
+      h2,
+      h3,
+      h4 {
+        padding-left: 0.5em;
+        border-left: 0.5em solid #bbb;
+        border-bottom: 1px solid #aaa;
+        text-transform: capitalize;
+      }
+      h2 {
+        margin-left: 0.5em;
+      }
+      h3 {
+        margin-left: 1em;
+      }
+      h4 {
+        margin-left: 1.5em;
+      }
+      h2 + p,
+      h2 + div {
+        margin-left: 1em;
+      }
+      h3 + p,
+      h3 + div {
+        margin-left: 1.5em;
+      }
+      h4 + p,
+      h4 + div {
+        margin-left: 2em;
+      }
+      nav {
+        display: block;
+      }
+      .source {
+        background-color: #eee;
+      }
+      ol > li {
+        margin-bottom: 5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>component</h1>
+    <ol>
+      <li>
+        <h2>gnb</h2>
+        <h3>gnb - 클래스명명</h3>
+        <div>
+          <p>워드프레스 기본 테마 gnb를 사용할 경우에 추천 방식입니다.</p>
+          <dl>
+            <dt>menu-item-has-children</dt>
+            <dd>하위 메뉴가 있는 경우</dd>
+            <dt>current-menu-item</dt>
+            <dd>현재 메뉴 - depth에 상관없이 부여</dd>
+            <dt>current-menu-parent</dt>
+            <dd>현재 메뉴 바로 상위 메뉴</dd>
+            <dt>current-menu-ancestor</dt>
+            <dd>
+              현재 메뉴의 상위 메뉴들 - depth2의 경우 current-menu-parent와
+              동일함
+            </dd>
+          </dl>
+        </div>
+
+        <h3>gnb - markup</h3>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">depth_1-1</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">depth_1-2 </a>
+                <ul>
+                  <li>
+                    <a href="#">depth_2-2-1</a>
+                  </li>
+                  <li class="current-menu-item">
+                    <a href="#">depth_2-2-2</a>
+                  </li>
+                  <li>
+                    <a href="#">depth_2-2-3</a>
+                  </li>
+                  <li>
+                    <a href="#">depth_2-2-4</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">depth_1-3</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">depth_1-4</a>
+                <ul>
+                  <li>
+                    <a href="#">depth_2-4-1</a>
+                  </li>
+                  <li>
+                    <a href="#">depth_2-4-2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">depth_1-5 </a>
+              </li>
+            </ul>
+          </nav>
+
+          <pre class="source">
+  &lt;nav&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;
+        &lt;a href="#"&gt;depth_1-1&lt;/a&gt;
+      &lt;/li&gt; 
+      &lt;li class="menu-item-has-children"&gt; 
+        &lt;a href="#"&gt;depth_1-2 &lt;/a&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;
+            &lt;a href="#"&gt;depth_2-2-1&lt;/a&gt;
+          &lt;/li&gt; 
+          &lt;li class="current-menu-item"&gt; 
+            &lt;a href="#"&gt;depth_2-2-2&lt;/a&gt; 
+          &lt;/li&gt; 
+          &lt;li&gt;
+            &lt;a href="#"&gt;depth_2-2-3&lt;/a&gt;
+          &lt;/li&gt; 
+          &lt;li&gt;
+            &lt;a href="#"&gt;depth_2-2-4&lt;/a&gt;
+          &lt;/li&gt; 
+        &lt;/ul&gt; 
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="#"&gt;depth_1-3&lt;/a&gt;
+      &lt;/li&gt; 
+      &lt;li class="menu-item-has-children"&gt; 
+        &lt;a href="#"&gt;depth_1-4&lt;/a&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;
+            &lt;a href="#"&gt;depth_2-4-1&lt;/a&gt;
+          &lt;/li&gt; 
+          &lt;li&gt;
+            &lt;a href="#"&gt;depth_2-4-2&lt;/a&gt;
+          &lt;/li&gt; 
+        &lt;/ul&gt; 
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="#"&gt;depth_1-5 &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt; 
+  &lt;/nav&gt;
+          </pre>
+        </div>
+      </li>
+      <li>
+        <h2>paging</h2>
+        <div>
+          <p>워드프레스 WP-PageNavi plug-in을 사용할 경우에 추천 방식입니다.</p>
+          <dl>
+            <dt>wp-pagenavi</dt>
+            <dd>페이징 최상의 클래스</dd>
+            <dt>pages</dt>
+            <dd>페이지 통계</dd>
+            <dt>page</dt>
+            <dd>페이지 링크</dd>
+            <dt>first</dt>
+            <dd>첫 페이지로 이동</dd>
+            <dt>prev</dt>
+            <dd>이전 페이지 묶음으로 이동</dd>
+            <dt>next</dt>
+            <dd>다음 페이지 묶음으로 이동</dd>
+            <dt>last</dt>
+            <dd>마지막 페이지로 이동</dd>
+            <dt>current</dt>
+            <dd>현재 페이지</dd>
+            <dt>extend</dt>
+            <dd>축약 페이지</dd>
+            <dt>smaller</dt>
+            <dd>현재 페이지보다 이전 페이지 - 잘 사용하지 않음</dd>
+            <dt>larger</dt>
+            <dd>현재 페이지보다 이후 페이지 - 잘 사용하지 않음</dd>
+          </dl>
+        </div>
+
+        <h3>gnb - markup</h3>
+        <div>
+          <div class="wp-pagenavi" role="navigation">
+            <span class="pages">Page 5 of 32</span>
+            <a class="first" href="#">« First</a>
+            <a class="prev" rel="prev" href="#">«</a>
+            <span class="extend">...</span>
+            <a class="page smaller" title="Page 3" href="#">3</a>
+            <a class="page smaller" title="Page 4" href="#">4</a>
+            <span aria-current="page" class="current">5</span>
+            <a class="page larger" title="Page 6" href="#">6</a>
+            <a class="page larger" title="Page 7" href="#">7</a>
+            <span class="extend">...</span>
+            <a class="larger page" title="Page 10" href="#">10</a>
+            <a class="larger page" title="Page 20" href="#">20</a>
+            <a class="larger page" title="Page 30" href="#">30</a>
+            <span class="extend">...</span>
+            <a class="next" rel="next" href="#">»</a>
+            <a class="last" href="#">Last »</a>
+          </div>
+
+          <pre class="source">
+  &lt;div class="wp-pagenavi" role="navigation"&gt;
+    &lt;a class="first" href="#"&gt;« First&lt;/a&gt;
+    &lt;a class="prev" rel="prev" href="#"&gt;«&lt;/a&gt;
+
+    &lt;span class="extend"&gt;...&lt;/span&gt;
+
+    &lt;a class="page smaller" title="Page 3" href="#"&gt;3&lt;/a&gt;
+    &lt;a class="page smaller" title="Page 4" href="#"&gt;4&lt;/a&gt;
+    &lt;span aria-current="page" class="current"&gt;5&lt;/span&gt;
+    &lt;a class="page larger" title="Page 6" href="#"&gt;6&lt;/a&gt;
+    &lt;a class="page larger" title="Page 7" href="#"&gt;7&lt;/a&gt;
+
+    &lt;span class="extend"&gt;...&lt;/span&gt;
+
+    &lt;a class="larger page" title="Page 10" href="#"&gt;10&lt;/a&gt;
+    &lt;a class="larger page" title="Page 20" href="#"&gt;20&lt;/a&gt;
+    &lt;a class="larger page" title="Page 30" href="#"&gt;30&lt;/a&gt;
+
+    &lt;span class="extend"&gt;...&lt;/span&gt;
+
+    &lt;a class="next" rel="next" href="#"&gt;»&lt;/a&gt;
+    &lt;a class="last" href="#"&gt;Last »&lt;/a&gt;     
+  &lt;/div&gt;
+          </pre>
+        </div>
+      </li>
+    </ol>
+  </body>
+</html>
