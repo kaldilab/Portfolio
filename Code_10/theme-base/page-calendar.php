@@ -53,7 +53,7 @@ $json_calendar = json_encode($result_calendar);
       plugins: ['dayGrid', 'googleCalendar'],
 
       // kaldi's google API
-      googleCalendarApiKey: 'AIzaSyBmQLI_dc0wdX-HxUztG56Y3iprOcVW9lc',
+      googleCalendarApiKey: '',
 
       // post
       /* events: <?php echo $json_calendar; ?>, */
@@ -66,7 +66,7 @@ $json_calendar = json_encode($result_calendar);
 
       // post & google
       eventSources: [{
-          googleCalendarId: 'ko.south_korea#holiday@group.v.calendar.google.com',
+          googleCalendarId: '',
           className: 'fc-google',
         },
         <?php echo $json_calendar; ?>

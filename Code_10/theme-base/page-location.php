@@ -6,7 +6,7 @@
 
 <!--map-->
 <div id="map" style="height:500px"></div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ba832b22a933254bb46c5b0cc3734978&libraries=services"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=****&libraries=services"></script>
 <script>
   var mapContainer = document.getElementById('map'),
     mapOption = {

@@ -79,7 +79,7 @@ $count_kakaomap = $query_kakaomap->found_posts;
   }
   ?>
 </div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ba832b22a933254bb46c5b0cc3734978&libraries=services,clusterer"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=****&libraries=services,clusterer"></script>
 <script>
   <?php
   // array kakaomap
