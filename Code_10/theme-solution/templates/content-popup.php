@@ -1,5 +1,5 @@
 <?php
-$cookie_check = isset($_COOKIE['slofPopupCloseToday']);
+$cookie_check = isset($_COOKIE['testPopupCloseToday']);
 $popup = get_field('popup', 'option');
 $popup_check = array();
 if ($popup) {
@@ -96,7 +96,7 @@ if ($popup) {
 
     // popup close today
     function popupCloseToday() {
-      setCookie('slofPopupCloseToday', 'Y', 1);
+      setCookie('testPopupCloseToday', 'Y', 1);
       jQuery(document).ready(function($) {
         $('#popup').modal('hide');
       });

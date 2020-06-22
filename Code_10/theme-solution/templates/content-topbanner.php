@@ -1,5 +1,5 @@
 <?php
-$cookie_check = isset($_COOKIE['slofTopbannerCloseToday']);
+$cookie_check = isset($_COOKIE['testTopbannerCloseToday']);
 $tb = get_field('topbanner', 'option');
 $tb_bgcolor = $tb['bgcolor'];
 $tb_type = $tb['type'];
@@ -71,7 +71,7 @@ if ($tb) {
   <script>
     // topbanner close today
     function topbannerCloseToday() {
-      setCookie('slofTopbannerCloseToday', 'Y', 1);
+      setCookie('testTopbannerCloseToday', 'Y', 1);
       jQuery(document).ready(function($) {
         $('#topbanner').slideUp(100);
       });

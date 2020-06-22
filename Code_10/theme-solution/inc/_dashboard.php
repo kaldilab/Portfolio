@@ -37,7 +37,7 @@ function project_custom_welcom_panel()
   </style>
   <div class="welcome-panel-inner">
     <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" alt="dev">
-    <h1 class="title">Slo.F에 오신 것을 환영합니다. [Ver. 0.9]</h1>
+    <h1 class="title">홈페이지에 오신 것을 환영합니다. [Ver. 0.9]</h1>
     <p class="about-description">최신 현황을 확인할 수 있습니다.</p>
     <div class="welcome-panel-column-container">
       <div class="welcome-panel-column"></div>

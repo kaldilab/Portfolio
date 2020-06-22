@@ -590,14 +590,14 @@
                 <script src="<?php echo get_template_directory_uri(); ?>/assets/amcharts-4.7.10/themes/animated.js"></script>
                 <script src="<?php echo get_template_directory_uri(); ?>/assets/amcharts-4.7.10/lang/ko_KR.js"></script>
 
-                <div id="slowakerGantt"></div>
+                <div id="workerGantt"></div>
 
                 <script>
                   // animated
                   am4core.useTheme(am4themes_animated);
 
                   // chart
-                  var chart = am4core.create("slowakerGantt", am4charts.XYChart);
+                  var chart = am4core.create("workerGantt", am4charts.XYChart);
                   chart.data = <?php echo $json_schedule; ?>;
                   chart.hiddenState.properties.opacity = 0;
                   chart.paddingRight = 30;

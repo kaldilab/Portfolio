@@ -76,7 +76,7 @@ if (function_exists('acf_add_options_page')) {
   $user = wp_get_current_user()->user_login;
   $theme_name = str_replace('theme-', 'Theme', $theme);
 
-  if (!($user == 'dev' || $user == 'slof' || $user == 'slofdev')) {
+  if (!($user == 'dev' || $user == 'test' || $user == 'testdev')) {
     $theme_check = '';
   } else {
     $theme_check = ' [' . $theme_name . ']';

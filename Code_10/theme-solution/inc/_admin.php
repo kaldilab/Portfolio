@@ -7,7 +7,7 @@ function project_admin_add_or_remove()
 
   // remove options page
   $current_user = wp_get_current_user()->user_login;
-  if (!($current_user == 'dev' || $current_user == 'slof' || $current_user == 'slofdev')) {
+  if (!($current_user == 'dev' || $current_user == 'test' || $current_user == 'testdev')) {
     remove_menu_page('cpt_settings');
     remove_menu_page('advanced_settings');
   }
@@ -18,7 +18,7 @@ add_action('admin_init', 'project_admin_add_or_remove');
 function project_remove_admin_menu()
 {
   $current_user = wp_get_current_user()->user_login;
-  if (!($current_user == 'dev' || $current_user == 'slof' || $current_user == 'slofdev')) {
+  if (!($current_user == 'dev' || $current_user == 'test' || $current_user == 'testdev')) {
     add_menu_page(
       '메뉴',
       '메뉴',
@@ -97,7 +97,7 @@ add_action('wp_before_admin_bar_render', 'project_admin_bar', 0);
 // project admin footer
 function project_change_footer_text()
 {
-  echo '<span id="footer-thankyou">Slo.F를 이용해주셔서 감사합니다.</span>';
+  echo '<span id="footer-thankyou">홈페이지를 이용해주셔서 감사합니다.</span>';
 }
 add_filter('admin_footer_text', 'project_change_footer_text');
 add_filter('update_footer',     '__return_empty_string', 11);
@@ -143,7 +143,7 @@ function project_admin_footer()
   <?php
   // user check
   $current_user = wp_get_current_user()->user_login;
-  if (!($current_user == 'dev' || $current_user == 'slof' || $current_user == 'slofdev')) {
+  if (!($current_user == 'dev' || $current_user == 'test' || $current_user == 'testdev')) {
   ?>
     <style type="text/css">
       .acf-postbox>.hndle .acf-hndle-cog {
