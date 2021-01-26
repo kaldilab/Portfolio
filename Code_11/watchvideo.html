@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>그린라이트키즈 캠페인 - 영상보기</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../css/swiper.min.css" rel="stylesheet"/>
+  <link href="../css/animate.min.css" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<!-- body-inner -->
+<div class="body-inner">
+
+  <!-- header -->
+  <header class="header">
+    <h1 class="text-center mt-3">HEADER</h1>
+  </header>
+  <!-- //header -->
+
+  <!-- //////////////////////////////////////////// -->
+
+  <!-- watchvideo modal -->
+  <div aria-hidden="true" class="watchvideo-modal modal fade" id="watchvideoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <span aria-label="Close" class="modal-close" data-dismiss="modal">팝업 닫기</span>
+        <div class="modal-header sr-only">
+          <h3 class="h3">영상보기</h3>
+        </div>
+        <div class="modal-body">
+          <!-- video -->
+          <div class="video-container">
+            <div class="video-youtube" id="watchvideo"></div>
+          </div>
+          <!-- //video -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //watchvideo modal -->
+
+  <!-- alert modal -->
+  <div aria-hidden="true" class="alert-modal modal fade" id="alertModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="h4">영상을 시청해주세요.</h4>
+          <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6 class="h6">영상을 시청하지 않으면 다음 영상으로 넘어갈 수 없습니다.</h6>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-sm" data-dismiss="modal" type="button">돌아가기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //alert modal -->
+
+  <!-- sub-bg -->
+  <span class="sub-bg img-01 pc"><img alt="배경 이미지" class="img-fluid" src="../images/img_sub_bg_01.png"></span>
+  <span class="sub-bg img-02 pc"><img alt="배경 이미지" class="img-fluid" src="../images/img_sub_bg_02.png"></span>
+  <span class="sub-bg img-03 pc"><img alt="배경 이미지" class="img-fluid" src="../images/img_sub_bg_03.png"></span>
+  <!-- //sub-bg -->
+
+  <!-- main -->
+  <main class="sub"> <!-- 서브 페이지 : .sub -->
+
+    <h1 class="sub-title h1">영상보기</h1>
+    <h4 class="sub-desc h4">기아자동차,(사)한국자원봉사문화, 도로교통공단은<br class="pc"> 어린이교통사고예방을 위한 영상교육을 만들었어요</h4>
+
+    <!-- 영상보기 -->
+    <section class="watchvideo">
+      <h2 class="sr-only">영상보기</h2>
+      <ul class="watchvideo-step swiper-menu">
+        <li><span>안전하게 길걷기</span></li>
+        <li class="step-locked" data-target="#alertModal" data-toggle="modal"><span>안전하게 길 건너기</span></li>
+        <li class="step-locked" data-target="#alertModal" data-toggle="modal"><span>안전하게 차 타기</span></li>
+        <li class="step-locked" data-target="#alertModal" data-toggle="modal"><span>안전하게 놀기</span></li>
+      </ul>
+      <div class="watchvideo__slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure class="slide-image">
+              <img alt="영상 이미지" class="img-fluid" src="../images/img_watchvideo_slide_01.png">
+              <span class="btn-watchvideo" data-target="#watchvideoModal" data-toggle="modal" id="eso500Q3R5M">영상보기</span>
+            </figure>
+            <h3 class="slide-title h3">안전하게 길 걷기</h3>
+            <h6 class="slide-desc h6">※영상을 끝까지 시청하셔야 다음 회차로 넘어갈 수 있어요.</h6>
+          </div>
+          <div class="swiper-slide">
+            <figure class="slide-image">
+              <img alt="영상 이미지" class="img-fluid" src="../images/img_watchvideo_slide_02.png">
+              <span class="btn-watchvideo" data-target="#watchvideoModal" data-toggle="modal" id="rxqOe8g0mec">영상보기</span>
+            </figure>
+            <h3 class="slide-title h3">안전하게 길 건너기</h3>
+            <h6 class="slide-desc h6">※영상을 끝까지 시청하셔야 다음 회차로 넘어갈 수 있어요.</h6>
+          </div>
+          <div class="swiper-slide">
+            <figure class="slide-image">
+              <img alt="영상 이미지" class="img-fluid" src="../images/img_watchvideo_slide_03.png">
+              <span class="btn-watchvideo" data-target="#watchvideoModal" data-toggle="modal" id="gvgCa8W0Xh4">영상보기</span>
+            </figure>
+            <h3 class="slide-title h3">안전하게 차 타기</h3>
+            <h6 class="slide-desc h6">※영상을 끝까지 시청하셔야 다음 회차로 넘어갈 수 있어요.</h6>
+          </div>
+          <div class="swiper-slide">
+            <figure class="slide-image">
+              <img alt="영상 이미지" class="img-fluid" src="../images/img_watchvideo_slide_04.png">
+              <span class="btn-watchvideo" data-target="#watchvideoModal" data-toggle="modal" id="y7Pflss5iDc">영상보기</span>
+            </figure>
+            <h3 class="slide-title h3">안전하게 놀기</h3>
+            <h6 class="slide-desc h6">※영상을 끝까지 시청하셔야 테스트를 할 수 있어요.</h6>
+            <div class="btn-wrap d-none">
+              <a class="btn" href="03_kit-home.html">테스트 하러 가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="watchvideo-button swiper-button">
+          <div class="watchvideo-button-prev swiper-button-prev"></div>
+          <div class="watchvideo-button-next swiper-button-next"></div>
+          <div class="button-locked" data-target="#alertModal" data-toggle="modal"></div>
+        </div>
+      </div>
+    </section>
+    <!-- //영상보기 -->
+
+  </main>
+  <!-- //main -->
+
+  <!-- //////////////////////////////////////////// -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <h1 class="text-center mt-4">FOOTER</h1>
+  </footer>
+  <!-- //footer -->
+
+</div>
+<!-- //body-inner -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/watchvideo.js"></script> <!-- 영상보기 js -->
+<script src="../js/script.js"></script>
+</body>
+</html>
