@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>카드 - 메시지 카드</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<meta name="description" content="결제대금연기 서비스 신청내역을 조회할 수 있습니다.">
+<meta name="keywords" content="카드, 롯카, 카드, 신용, 체크, 결제대금, 결제대금연기, 대금연기, 연기, 결제대금연기 내역, 연기 신청, 신청 내역">
+<link rel="shortcut icon" href="https://image.co.kr/webapp/mobile/images/favicon/apple_touch_icon_72.png">
+<link rel="apple-touch-icon" href="https://image.co.kr/webapp/mobile/images/favicon/apple_touch_icon_144.png">
+<link href="https://image.co.kr/webapp/mobile/css/loca/m_loca_swiper.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_font.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_common.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_contents.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/loca_v2/m_card_loca_v2.css" rel="stylesheet" type="text/css">
+
+<!-- 감사카드 -->
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<!-- //감사카드 -->
+
+</head>
+
+<body>
+
+    <!-- 감사카드 -->
+    <section id="container" class="container thankyou-view">
+        
+        <!-- message -->
+        <div class="msg-preview msg-view">
+            <div class="msg-card active">
+                <span class="deco txt"></span>
+                <span class="deco obj"></span>
+                <div class="msg-paper">
+                    <div class="inner">
+                        <div class="msg-result"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="msgSlider" class="msg-slider">
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo1"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-01.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="1">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="" class="msg-video-desc" target="_blank">[로카넷필름] 우리 형제 편 보러가기</a>
+                </div>
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo2"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-02.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="2">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="" class="msg-video-desc" target="_blank">[로카넷필름] 30년의 남편 편 보러가기</a>
+                </div>
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo3"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-03.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="3">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="" class="msg-video-desc" target="_blank">[로카넷필름] 니딸, 내딸 편 보러가기</a>
+                </div>
+            </div>
+            <div class="msg-banner">
+                <a href="https://m.co.kr/app/LPCDAZA_V100.lc" target="_blank">
+                    <div class="banner-text">
+                        <p><strong>할인부터 적립까지 다 챙기세요!</strong><span>나에게 맞는 카드 상품 보러가기</span></p>
+                    </div>
+                    <img class="banner-image" src="../images/img-banner.png" alt="이미지">
+                </a>
+            </div>
+            <div class="btnBtm type02 marT0">
+                <div class="btnArea">
+                    <a href="index.html" class="btnLP btnL" target="_blank">메시지 카드 다시 보내기</a>
+                </div>
+            </div>
+        </div>
+        <!-- //message -->
+
+    </section>
+
+    <div class="dimmed"></div>
+    <!-- //감사카드 -->
+
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/selectbox.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/script_LP.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/loca_v2/LOCA.js"></script>
+
+    <!-- 감사카드 -->
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+        // 스킨 번호 (01, 02, 03, 04, 05, 06, 07, 08, 09, 10)
+        var skinNumberVal = '01';
+        // 메시지 텍스트
+        var msgTextVal = '사랑으로 키워주셔서 감사합니다.\n\n평생 저에게 베푸신\n깊은 사랑과 헌신에 늘 감사드립니다.\n언제나 가슴에 새기며,\n잊지 않고 효도하겠습니다.\n언제나 건강히 제 옆에 있어주세요!\n사랑하고 감사합니다.';
+
+        // 스킨 출력
+        document.querySelector('.msg-card').classList.add('skin-' + skinNumberVal);
+
+        // 메시지 출력
+        document.querySelector('.msg-result').innerHTML = msgTextVal.replace(/\r?\n/g, '<br>');
+    </script>
+    <!-- //감사카드 -->
+
+</body>
+</html>

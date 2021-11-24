@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>카드 - 메시지 카드</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<meta name="description" content="결제대금연기 서비스 신청내역을 조회할 수 있습니다.">
+<meta name="keywords" content="카드, 롯카, 카드, 신용, 체크, 결제대금, 결제대금연기, 대금연기, 연기, 결제대금연기 내역, 연기 신청, 신청 내역">
+<link rel="shortcut icon" href="https://image.co.kr/webapp/mobile/images/favicon/apple_touch_icon_72.png">
+<link rel="apple-touch-icon" href="https://image.co.kr/webapp/mobile/images/favicon/apple_touch_icon_144.png">
+<link href="https://image.co.kr/webapp/mobile/css/loca/m_loca_swiper.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_font.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_common.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/m_contents.css" rel="stylesheet" type="text/css">
+<link href="https://image.co.kr/webapp/mobile/css/loca_v2/m_card_loca_v2.css" rel="stylesheet" type="text/css">
+<meta property="og:image" content="http://kaldilab.com/test/image.gif" />
+
+<!-- 감사카드 -->
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<!-- //감사카드 -->
+
+</head>
+
+<body>
+    <header id="header" class="header">
+        <button type="button" class="prev">이전</button>
+        <button type="button" class="navT">메뉴</button>
+    </header>
+
+    <!-- 감사카드 -->
+    <section id="container" class="container thankyou-card">
+        <h1 class="titDep1" role="text">메시지 카드</h1>
+        
+        <!-- skin -->
+        <div class="skin-container">
+            <input id="skinNumber" class="skin-number" type="hidden" value="01">
+            <h2 class="skin-title">스킨을 선택해 주세요</h2>
+            <div class="skin-slider">
+                <div class="skin-01"><figure><img src="../images/img-skin-01-bg.png" alt="Skin 01"></figure></div>
+                <div class="skin-02"><figure><img src="../images/img-skin-02-bg.png" alt="Skin 02"></figure></div>
+                <div class="skin-03"><figure><img src="../images/img-skin-03-bg.png" alt="Skin 03"></figure></div>
+                <div class="skin-04"><figure><img src="../images/img-skin-04-bg.png" alt="Skin 04"></figure></div>
+                <div class="skin-05"><figure><img src="../images/img-skin-05-bg.png" alt="Skin 05"></figure></div>
+                <div class="skin-06"><figure><img src="../images/img-skin-06-bg.png" alt="Skin 06"></figure></div>
+                <div class="skin-07"><figure><img src="../images/img-skin-07-bg.png" alt="Skin 07"></figure></div>
+                <div class="skin-08"><figure><img src="../images/img-skin-08-bg.png" alt="Skin 08"></figure></div>
+                <div class="skin-09"><figure><img src="../images/img-skin-09-bg.png" alt="Skin 09"></figure></div>
+                <div class="skin-10"><figure><img src="../images/img-skin-10-bg.png" alt="Skin 10"></figure></div>
+            </div>
+        </div>
+        <!-- //skin -->
+
+        <!-- message -->
+        <div class="msg-container">
+            <div class="msg-card skin-01">
+                <span class="deco txt"></span>
+                <div class="msg-box">
+                    <div class="inner">
+                        <textarea id="msgForm" class="msg-form" placeholder="소중한 마음을 입력하려면 선택해주세요"></textarea>
+                        <div class="tcenter">
+                            <button class="msg-select-btn" onclick="MOBILE.layerPopup.openPop('#msgSelect')">다른 문구 선택하기</button>
+                        </div>
+                        <button class="msg-back"><span>스킨선택</span></button>
+                        <span class="msg-length"><strong>0</strong>/150</span>
+                    </div>
+                </div>
+            </div>
+            <div id="msgSlider" class="msg-slider">
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo1"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-01.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="1">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="#" class="msg-video-desc" target="_blank">[카드] 우리 형제 편 보러가기</a>
+                </div>
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo2"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-02.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="2">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="#" class="msg-video-desc" target="_blank">[카드] 30년의 남편 편 보러가기</a>
+                </div>
+                <div>
+                    <div class="msg-video-wrapper">
+                        <div class="msg-video-youtube" id="youtubeVideo3"></div>
+                        <img class="msg-video-thumb" src="../images/img-youtube-thumb-03.png" alt="이미지">
+                        <button class="msg-video-play" data-video-index="3">재생</button>
+                    </div>
+                    <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                    <a href="#" class="msg-video-desc" target="_blank">[카드] 니딸, 내딸 편 보러가기</a>
+                </div>
+            </div>
+            <div class="msg-banner">
+                <a href="https://m.co.kr/app/LPCDAZA_V100.lc" target="_blank">
+                    <div class="banner-text">
+                        <p><strong>할인부터 적립까지 다 챙기세요!</strong><span>나에게 맞는 카드 상품 보러가기</span></p>
+                    </div>
+                    <img class="banner-image" src="../images/img-banner.png" alt="이미지">
+                </a>
+            </div>
+            <div class="btnBtm type02 marT0">
+                <div class="btnArea group">
+                    <button class="btnLP btnL msg-preview-btn" onclick="MOBILE.layerPopup.openPop('#msgPreview')">미리보기</button>
+                    <button class="btnLP btnL msg-share-list-btn" onclick="">카드 공유 방법 선택하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- //message -->
+
+    </section>
+
+    <!-- 문구선택하기 -->
+    <article id="msgSelect" class="layPopup msg-select" style="display:none" data-type="general">
+        <div class="wrapper">
+            <div class="cont">
+                <ul class="msg-select-list">
+                    <li class="msg-select-item selected">
+                        <strong>직접 입력하기</strong>
+                    </li>
+                    <li class="msg-select-item">
+                        <div class="msg-select-text"><strong>사랑으로 키워주셔서 감사합니다. <br><br></strong><span>평생 저에게 베푸신 <br>깊은 사랑과 헌신에 늘 감사드립니다. <br>언제나 가슴에 새기며, <br>잊지 않고 효도하겠습니다. <br>언제나 건강히 제 옆에 있어주세요! <br>사랑하고 감사합니다.</span></div>
+                    </li>
+                    <li class="msg-select-item">
+                        <div class="msg-select-text"><strong>선생님의 노고에 감사드립니다. <br><br></strong><span>선생님, 항상 사랑으로 대해주시고, <br>이끌어 주셔서 감사합니다. <br>언제나 건강하시고, 행복한 일이 <br>가득하시길 기원합니다.</span></div>
+                    </li>
+                    <li class="msg-select-item">
+                        <div class="msg-select-text"><strong>항상 너를 응원한단다! <br><br></strong><span>요즘 여러가지로 힘들지? <br>조금만 더 즐기며 하다보면, <br>꼭 좋은 결과 있을거야. <br>항상 응원하고 있다는거 잊지말고 <br>화이팅!</span></div>
+                    </li>
+                    <li class="msg-select-item">
+                        <div class="msg-select-text"><strong>행복하고, 건강하세요! <br><br></strong><span>힘들고 어려운 시기에 <br>응원해주셔서 감사합니다. <br>그 마음 소중히 간직하겠습니다. <br>늘 감사합니다.</span></div>
+                    </li>
+                    <li class="msg-select-item">
+                        <div class="msg-select-text"><strong>늘 신경써 주셔서 감사합니다. <br><br></strong><span>언제나 든든하게 힘이 <br>되어주셔서 감사합니다. <br>늘 건강하시고, <br>행복과 평안이 가득하시길 <br>진심으로 기원합니다.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="closeL">닫기</button>
+    </article>
+    <!-- //문구선택하기 -->
+
+    <!-- 미리보기 -->
+    <article id="msgPreview" class="layPopup msg-preview" style="display:none" data-type="general">
+        <div class="wrapper">
+            <div class="cont">
+                <div class="msg-card skin-01 active">
+                    <span class="deco txt"></span>
+                    <span class="deco obj"></span>
+                    <div class="msg-paper">
+                        <div class="inner">
+                            <div class="msg-result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="msgSliderPreview" class="msg-slider">
+                    <div>
+                        <div class="msg-video-wrapper">
+                            <div class="msg-video-youtube" id="youtubeVideo4"></div>
+                            <img class="msg-video-thumb" src="../images/img-youtube-thumb-01.png" alt="이미지">
+                            <button class="msg-video-play" data-video-index="4">재생</button>
+                        </div>
+                        <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                        <a href="#" class="msg-video-desc" target="_blank">[카드] 우리 형제 편 보러가기</a>
+                    </div>
+                    <div>
+                        <div class="msg-video-wrapper">
+                            <div class="msg-video-youtube" id="youtubeVideo5"></div>
+                            <img class="msg-video-thumb" src="../images/img-youtube-thumb-02.png" alt="이미지">
+                            <button class="msg-video-play" data-video-index="5">재생</button>
+                        </div>
+                        <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                        <a href="#" class="msg-video-desc" target="_blank">[카드] 30년의 남편 편 보러가기</a>
+                    </div>
+                    <div>
+                        <div class="msg-video-wrapper">
+                            <div class="msg-video-youtube" id="youtubeVideo6"></div>
+                            <img class="msg-video-thumb" src="../images/img-youtube-thumb-03.png" alt="이미지">
+                            <button class="msg-video-play" data-video-index="6">재생</button>
+                        </div>
+                        <h4 class="msg-video-title">마음 따뜻한 이야기를 함께 전해요!</h4>
+                        <a href="#" class="msg-video-desc" target="_blank">[카드] 니딸, 내딸 편 보러가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="closeL">닫기</button>
+    </article>
+    <!-- //미리보기 -->
+
+    <!-- 메시지 카드 공유 방법 선택 -->
+    <article id="msgShare" class="btmPopWrap msg-share">
+        <div class="btmPopInner">
+            <h2 class="btmPopTit"><strong>메시지 카드 공유 방법 선택</strong></h2>
+            <div class="btmPopCont">
+                <ul class="msg-share-list">
+                    <li class="msg-share-item kakao selected"><span>카카오톡</span></li>
+                    <li class="msg-share-item sms"><span>모바일(문자)</span></li>
+                    <li class="msg-share-item copy"><span>링크 복사</span></li>
+                </ul>
+                <div class="btnAreaColType">
+                    <button type="button" class="btnLP btnL msg-share-btn" onclick="sendKakao()">메시지 카드 발송하기</button>
+                    <button type="button" class="btnLP btnL msg-share-btn" onclick="sendMobile()">메시지 카드 발송하기</button>
+                    <button type="button" class="btnLP btnL msg-share-btn" onclick="sendLink()">메시지 카드 링크 복사하기</button>
+                </div>
+            </div>
+            <button class="closeL">닫기</button>
+        </div>
+    </article>
+    <!-- //메시지 카드 공유 방법 선택 -->
+
+    <div class="alertBox">
+        <div class="alertInner">
+            <div class="alertMsg">
+                <h3 class="alertTit">메시지를 입력해 주세요.</h3>
+            </div>
+            <div class="btnArea">
+                <button type="button" class="btnSolid3 alertBoxClose">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dimmed"></div>
+    <!-- //감사카드 -->
+
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/selectbox.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/script_LP.js"></script>
+    <script type="text/javascript" src="https://image.co.kr/webapp/mobile/js/loca_v2/LOCA.js"></script>
+
+    <!-- 감사카드 -->
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+        // 스킨 번호
+        var skinNumber = document.querySelector('#skinNumber');
+        // 메시지 텍스트
+        var msgText = document.querySelector('#msgForm');
+        
+        // 메시지 카드 발송하기 - 카카오톡
+        function sendKakao() {
+            var skinNumberVal = skinNumber.value;
+            var msgTextVal = msgText.value;
+            alert('[카카오톡]\n1. 스킨 번호 : ' + skinNumberVal + '\n2. 메시지 텍스트 :\n' + msgTextVal);
+        }
+        
+        // 메시지 카드 발송하기 - 모바일(문자)
+        function sendMobile() {
+            var skinNumberVal = skinNumber.value;
+            var msgTextVal = msgText.value;
+            alert('[모바일(문자)]\n1. 스킨 번호 : ' + skinNumberVal + '\n2. 메시지 텍스트 :\n' + msgTextVal);
+        }
+        
+        // 메시지 카드 링크 복사하기 - 링크 복사
+        function sendLink() {
+            var skinNumberVal = skinNumber.value;
+            var msgTextVal = msgText.value;
+            alert('[링크 복사]\n1. 스킨 번호 : ' + skinNumberVal + '\n2. 메시지 텍스트 :\n' + msgTextVal);
+        }
+    </script>
+    <!-- //감사카드 -->
+
+</body>
+</html>
