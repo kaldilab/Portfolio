@@ -1,0 +1,134 @@
+@charset "utf-8"; 
+
+/* header */
+.main .header__tit { display: block; }
+
+/* maintile */
+.maintile { position: relative; } 
+.maintile__swiper { height: 100%;}
+.maintile__swiper .swiper { width: 100%; height: 100%; } 
+.maintile__swiper .swiper-wrapper { flex-direction: row; } 
+.maintile__swiper .swiper-slide { background: #fff; height: calc(100% / 2) !important; } 
+.maintile__swiper .swiper-pagination { position: absolute; bottom: 20px; left: 0; width: 100%; z-index: 99; }
+.maintile__swiper .swiper-pagination .swiper-pagination-bullet { margin: 0 8px; width: 14px; height: 14px; background-color: #fff; opacity: .5; }
+.maintile__swiper .swiper-pagination .swiper-pagination-bullet-active { opacity: 1; }
+.maintile__link { position: relative; height: 50vh; min-height: 450px; overflow: hidden; cursor: pointer; } 
+.maintile__link::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background-color: #1885d3; opacity: 0; transition: .3s; } 
+.maintile__image { position: relative; z-index: 1; object-fit: cover; width: 100%; height: 100%; transform: scale(1.01);  transition: .3s; }
+.maintile__text { position: absolute; bottom: 70px; left: 60px; right: 60px; z-index: 2; } 
+.maintile__tit { font-size: 42px; font-weight: 500; color: #fff; } 
+.maintile__desc { margin-top: 20px; font-size: 20px; color: #e8e8e8; } 
+.maintile__info { margin-top: 0; color: #d6d6d6; line-height: 1.5; height: 0; opacity: 0; overflow: hidden; transition: .3s; } 
+.maintile__hash { margin-top: 0; height: 0; opacity: 0; overflow: hidden; transition: .3s; } 
+.maintile__hash li { display: inline-block; margin-right: 6px; margin-top: 8px; padding: 7px 12px; font-size: 16px; color: #fff; line-height: 1; background-color: rgba(51,51,51,.2); border-radius: 20px; opacity: 0; transition: .4s; }
+.maintile__more { display: none; margin-top: 0; height: 0; opacity: 0; overflow: hidden; background: url('../images/main/ico_maintile_more.png') no-repeat center / cover; transition: .3s; } 
+.maintile__link:hover::before { opacity: .8; } 
+.maintile__link:hover .maintile__image { transform: scale(1.1); } 
+.maintile__link:hover .maintile__info { margin-top: 40px; height: 54px; opacity: 1; } 
+.maintile__link:hover .maintile__hash { margin-top: 22px; height: auto; opacity: 1; } 
+.maintile__link:hover .maintile__hash li { opacity: 1; } 
+.maintile__link.touch:hover .maintile__more { display: block; width: 142px; height: 40px; margin-top: 25px; opacity: 1; overflow: visible; }
+.maintile__cursor { position: fixed; display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; background-color: #fff; border-radius: 50%; transform: translate(-50%, -50%); transition-duration: .3s; transition-timing-function: ease-out; z-index: 9; visibility: hidden; opacity: 0; pointer-events: none; } 
+.maintile__location { position: absolute; bottom: 60px; right: 60px; z-index: 9; display: flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-color: #222; transition: .5s; overflow: hidden; box-sizing: border-box; }
+.maintile__location img { display: inline-block; width: 35px; height: 23px; transition: .5s; } 
+.maintile__location span { position: absolute; top: 50%; right: -100%; transform: translateY(-50%); display: inline-block; color: #fff; opacity: 0; transition: .5s; }
+.maintile__location:hover { width: 170px; padding-left: 18px; justify-content: flex-start; }
+.maintile__location:hover span { width: 74px; right: 30px; opacity: 1; }
+.maintile__control { position: absolute; top: 50%; right: 70px; transform: translateY(-50%); z-index: 9; width: 130px; height: 130px; }
+.maintile__control::before,
+.maintile__control::after { content: ''; position: absolute; top: 50%; left: 50%; background-color: #fff; border-radius: 50%; transform: translate(-50%, -50%); transition: .6s; }
+.maintile__control::before { width: 90px; height: 90px; opacity: .8; z-index: 2; }
+.maintile__control::after { width: 0; height: 0; opacity: 0; z-index: 1; }
+.maintile__control span { display: flex; align-items: center; position: absolute; top: 50%; left: 50%; z-index: 2; background-repeat: no-repeat; background-position: center; transition: .3s; }
+.maintile__control span.ico-arrow { width: 24px; height: 24px; background-image: url('../images/main/ico_maintile_arrow.png'); background-size: contain; }
+.maintile__control.next span.ico-arrow { transform: translate(-50%, -50%) rotateY(0); }
+.maintile__control.back span.ico-arrow { transform: translate(-50%, -50%) rotateY(180deg); }
+.maintile__control span.ico-text { width: 130px; height: 130px; background-image: url('../images/main/txt_hospital_white.png'); background-size: cover; transition: .5s; animation: textRotate 10s linear infinite; }
+.maintile__control:hover::before { width: 0; height: 0; opacity: 0; }
+.maintile__control:hover::after { width: 155px; height: 155px; opacity: 1; }
+.maintile__control:hover span.ico-text { background-image: url('../images/main/txt_hospital_black.png'); }
+
+/* mainpop */
+.mainpop__group { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background-color: #eee; visibility: hidden; transform: translateY(100vh); transition: .6s .2s cubic-bezier(0.65, 0, 0.35, 1); }
+.mainpop__group.open { visibility: visible; transform: translateY(0); }
+.mainpop__top { position: absolute; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100px; background-color: #fff; z-index: 1; }
+.mainpop__list { position: relative; margin-top: 100px; height: calc(100% - 100px); overflow-y: auto; }
+.mainpop__item { float: left; width: 25%; overflow: hidden; }
+.mainpop__tit { font-size: 32px; font-weight: 700; text-align: center; }
+.mainpop__tit strong { color: #112e56; }
+.mainpop__close { position: absolute; top: 30px; right: 30px; width: 40px; height: 40px; transition: .3s; }
+.mainpop__close:hover { transform: rotate(90deg);}
+.mainpop__link { position: relative; height: 100%; } 
+.mainpop__link::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background-color: #1885d3; opacity: 0; transition: .3s; } 
+.mainpop__image { position: relative; z-index: 1; object-fit: cover; width: 100%; height: 100%; transform: scale(1.01); transition: .3s; }
+.mainpop__text { position: absolute; bottom: 60px; left: 50px; z-index: 2; transform: translateY(100%); opacity: 0; overflow: hidden; transition: .3s; }
+.mainpop__info { position: absolute; bottom: 60px; left: 60px; z-index: 2; overflow: hidden; transition: .3s; }
+.mainpop__none { position: relative; height: 100%; }
+.mainpop__cat { color: #e8e8e8; }
+.mainpop__name { margin-top: 20px; font-size: 20px; color: #fff; }
+.mainpop__name strong { font-size: 36px; font-weight: 500; }
+.mainpop__hash { margin-top: 17px; }
+.mainpop__hash li { display: inline-block; margin-right: 6px; margin-top: 8px; padding: 8px 12px; font-size: 16px; color: #fff; line-height: 1; background-color: rgba(0,0,0,.2); border-radius: 20px; } 
+.mainpop__word { font-size: 36px; font-weight: 500; color: #fff; }
+.mainpop__desc { height: 0; opacity: 0; overflow: hidden; font-size: 18px; color: #e8e8e8; transition: .3s; }
+.mainpop__link:hover::before { opacity: .8; } 
+.mainpop__link:hover .maintile__image { transform: scale(1.1); } 
+.mainpop__link:hover .mainpop__text { transform: translateY(0); opacity: 1; } 
+.mainpop__link:hover .mainpop__desc { margin-top: 20px; height: 18px; opacity: 1; } 
+.mainpop__cursor { position: fixed; display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; background-color: #fff; border-radius: 50%; transform: translate(-50%, -50%); transition-duration: .3s; transition-timing-function: ease-out; z-index: 9999; visibility: hidden; opacity: 0; pointer-events: none; } 
+
+/* footer */
+.main .footer { display: none; }
+
+/* responsive */
+@media all and (max-width:1440px) {
+  .maintile__control { display: none; }
+  .mainpop__item { width: 33.33%; }
+}
+
+@media all and (max-width:1024px) {
+  .mainpop__item { width: 50%; }
+}
+
+@media all and (max-width:750px) {
+  .maintile__swiper .swiper-pagination { bottom: 4rem; }
+  .maintile__swiper .swiper-pagination .swiper-pagination-bullet { margin: 0 .8rem; width: 1.4rem; height: 1.4rem; }
+  .maintile__link { min-height: 100vw; }
+  .maintile__text { bottom: 10rem; left: 4rem; right: 4rem; } 
+  .maintile__tit { font-size: 5.8rem; } 
+  .maintile__desc { margin-top: 3rem; font-size: 3rem; font-weight: 500; } 
+  .maintile__info { font-size: 2.8rem; } 
+  .maintile__hash li { margin-right: 1rem; margin-top: 1rem; padding: 1rem 1.8rem; font-size: 2.6rem; border-radius: 2.3rem; } 
+  .maintile__link:hover .maintile__info { margin-top: 5rem; height: 8.4rem; } 
+  .maintile__link:hover .maintile__hash { margin-top: 4rem; } 
+  .maintile__link.touch:hover .maintile__more { width: 28.2rem; height: 8rem; margin-top: 5rem; }
+  .maintile__location { bottom: 4rem; right: 4rem; width: 11rem; height: 11rem; }
+  .maintile__location img { width: 6rem; height: 3.9rem; }
+  .maintile__location:hover { width: 11rem; padding-left: 0; justify-content: center; }
+  .maintile__location:hover span { display: none; }
+  .mainpop__top { height: 10rem; }
+  .mainpop__tit { font-size: 3.6rem; }
+  .mainpop__close { top: 2.5rem; right: 4rem; width: 5rem; height: 5rem; padding: .5rem; }
+  .mainpop__list { margin-top: 10rem; height: calc(100% - 10rem); }
+  .mainpop__link,
+  .mainpop__cover { height: 80vw; }
+  .mainpop__text { bottom: 5rem; left: 3rem; right: 3rem; }
+  .mainpop__info { bottom: 5rem; left: 3rem; right: 3rem; }
+  .mainpop__cat { font-size: 2.8rem; }
+  .mainpop__name { font-size: 3rem; margin-top: 2rem; }
+  .mainpop__name strong { font-size: 5.8rem; }
+  .mainpop__hash { margin-top: 3rem; }
+  .mainpop__hash li { max-width: 100%; padding: 1.11rem 1.8rem; margin-right: .7rem; margin-top: 1rem; font-size: 2.6rem; border-radius: 2.3rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box; }
+  .mainpop__word { font-size: 4.5rem; }
+  .mainpop__desc { font-size: 2.8rem; }
+  .mainpop__link:hover .mainpop__desc { margin-top: 2.4rem; height: 2.8rem; } 
+}
+
+@keyframes textRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
